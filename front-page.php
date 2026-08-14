@@ -5,7 +5,7 @@
     <div class="hero-content">
         <h1 class="stroke-heading">Welcome to Butterfly Effect</h1>
         <p>A short line describing what the site/business is about goes here.</p>
-        <a href="#" class="btn">Book Now</a>
+        <a href="https://butterflyeffect.versum.com/" class="btn" target="_blank" rel="noopener">Book Now</a>
     </div>
     <div class="hero-dots">
         <span class="active"></span>
