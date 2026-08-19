@@ -47,16 +47,30 @@
                         <span class="menu-sub-name">Hydrating &amp; Plumping</span>
                     </a>
                 </li>
-                <li class="menu-sub-group">
+                <li>
                     <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
                         <span class="menu-sub-name">Rejuvenation &amp; Anti-Ageing</span>
                     </a>
-                    <ul class="menu-sub-sublist">
-                        <li><a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">Redness Relief</a></li>
-                        <li><a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">Anti Acne</a></li>
-                        <li><a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">Depigmentation</a></li>
-                        <li><a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">Male Skincare</a></li>
-                    </ul>
+                </li>
+                <li>
+                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                        <span class="menu-sub-name">Redness Relief</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                        <span class="menu-sub-name">Anti Acne</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                        <span class="menu-sub-name">Depigmentation</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                        <span class="menu-sub-name">Male Skincare</span>
+                    </a>
                 </li>
             </ul>
         </li>

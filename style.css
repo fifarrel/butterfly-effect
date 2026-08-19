@@ -19,12 +19,15 @@ Version: 1.0
   --gold:        #B9975B;
   --gold-soft:   #E8DCC4;
 
-  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-display: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
   --font-body:    'Inter', -apple-system, sans-serif;
 
   --max-width: 1200px;
   --gap: clamp(1.5rem, 3vw, 3rem);
-  --radius: 2px;
+  --radius: 0;
+
+  --btn-gradient:       linear-gradient(135deg, var(--rose) 0%, var(--rose-deep) 100%);
+  --btn-gradient-hover: linear-gradient(135deg, var(--rose-deep) 0%, #33203F 100%);
 }
 
 /* =========================================================
@@ -43,8 +46,9 @@ img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 h1, h2, h3 {
   font-family: var(--font-display);
-  font-weight: 600;
-  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: .015em;
+  line-height: 1.1;
   margin: 0 0 .5em;
 }
 .container {
@@ -53,16 +57,27 @@ h1, h2, h3 {
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
 
-/* Signature underline stroke — used under key headings */
+/* Signature underline — straight hairline + diamond, used under key headings */
 .stroke-heading { position: relative; display: inline-block; }
 .stroke-heading::after {
   content: "";
   position: absolute;
-  left: 2%;
-  bottom: -0.18em;
-  width: 96%;
-  height: 6px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 8'%3E%3Cpath d='M2 5 C40 1, 80 8, 120 4 C150 1, 175 6, 198 3' stroke='%23AE6C74' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
+  left: 50%;
+  bottom: -0.6em;
+  transform: translateX(-50%);
+  width: 72px;
+  height: 1px;
+  background: var(--gold);
+}
+.stroke-heading::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: calc(-0.6em - 3px);
+  width: 7px;
+  height: 7px;
+  background: var(--gold);
+  transform: translateX(-50%) rotate(45deg);
 }
 
 /* =========================================================
@@ -137,10 +152,20 @@ h1, h2, h3 {
   padding: 0;
 }
 .main-nav > ul > li { position: relative; }
+.main-nav > ul > li:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 13px;
+  background: var(--line);
+}
 .main-nav a {
   font-size: .82rem;
   text-transform: uppercase;
-  letter-spacing: .08em;
+  letter-spacing: .1em;
 }
 .main-nav > ul > li > a::after {
   content: "";
@@ -171,16 +196,22 @@ h1, h2, h3 {
 
 .btn {
   display: inline-block;
-  padding: .7rem 1.6rem;
-  background: var(--rose);
+  padding: .8rem 1.9rem;
+  background: var(--btn-gradient);
   color: var(--white);
   font-size: .78rem;
   text-transform: uppercase;
-  letter-spacing: .08em;
+  letter-spacing: .14em;
+  border: 1px solid var(--gold);
   border-radius: var(--radius);
-  transition: background .2s ease;
+  box-shadow: 0 10px 24px -14px rgba(74, 46, 99, .6);
+  transition: background .3s ease, box-shadow .3s ease, transform .2s ease;
 }
-.btn:hover { background: var(--rose-deep); }
+.btn:hover {
+  background: var(--btn-gradient-hover);
+  box-shadow: 0 14px 30px -14px rgba(74, 46, 99, .75);
+  transform: translateY(-1px);
+}
 
 /* =========================================================
    HERO
@@ -249,7 +280,7 @@ h1, h2, h3 {
   transition: background .3s ease, transform .3s ease, box-shadow .3s ease;
 }
 .category-btn:hover {
-  background: var(--rose);
+  background: var(--btn-gradient);
   transform: translateY(-4px);
   box-shadow: 0 20px 34px -18px rgba(46, 36, 56, .4);
 }
@@ -1172,6 +1203,33 @@ a.menu-item-head:hover .menu-item-arrow { transform: translateX(4px); }
 
 @media (max-width: 760px) {
   .footer-top { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   FLOATING PHONE BUTTON
+   ========================================================= */
+.phone-fab {
+  position: fixed;
+  right: clamp(1.25rem, 3vw, 2rem);
+  bottom: clamp(1.25rem, 3vw, 2rem);
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  background: var(--btn-gradient);
+  color: var(--white);
+  box-shadow: 0 12px 28px -10px rgba(74, 46, 99, .65);
+  transition: background .3s ease, box-shadow .3s ease, transform .2s ease;
+}
+.phone-fab svg { width: 24px; height: 24px; }
+.phone-fab:hover {
+  background: var(--btn-gradient-hover);
+  box-shadow: 0 16px 34px -10px rgba(74, 46, 99, .8);
+  transform: translateY(-2px);
 }
 
 /* =========================================================
