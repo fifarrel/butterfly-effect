@@ -41,258 +41,56 @@
     <span class="eyebrow">Our Training &amp; Courses</span>
     <h2 class="stroke-heading">Course Offering</h2>
 
-    <div class="course-card">
-        <h3>Microdermabrasion</h3>
-        <ul class="course-meta">
-            <li><span>Duration</span>1 Day &middot; 10am&ndash;2pm</li>
-            <li><span>Location</span>BE Academy, Dublin</li>
-            <li><span>Certificate</span>AIT Accredited BE Microdermabrasion Certificate</li>
-            <li><span>Cost</span>&euro;350</li>
-        </ul>
+    <div class="course-preview-grid">
+        <a class="course-preview-card" href="<?php echo esc_url( home_url( '/microdermabrasion/' ) ); ?>">
+            <h3>Microdermabrasion</h3>
+            <ul class="course-meta">
+                <li><span>Duration</span>1 Day</li>
+                <li><span>Cost</span>&euro;350</li>
+            </ul>
+            <p>A deep exfoliating treatment that buffs the skin using a fine stream of crystals or a diamond tip &mdash; learn to treat ageing skin, fine lines, hyperpigmentation and acne scarring.</p>
+            <span class="course-preview-link">View Course Details &rarr;</span>
+        </a>
 
-        <h4>Programme Overview</h4>
-        <p>Microdermabrasion is a deep exfoliating treatment which buffs the skin using a fine stream of crystals or a diamond tip.</p>
+        <a class="course-preview-card" href="<?php echo esc_url( home_url( '/microneedling-mesotherapy/' ) ); ?>">
+            <h3>Microneedling Mesotherapy</h3>
+            <ul class="course-meta">
+                <li><span>Duration</span>1 Day</li>
+                <li><span>Cost</span>&euro;400</li>
+            </ul>
+            <p>A minimally invasive treatment using micro-fine needles to trigger the skin&rsquo;s natural collagen response and boost absorption of active ingredients.</p>
+            <span class="course-preview-link">View Course Details &rarr;</span>
+        </a>
 
-        <h4>Which Skin Concerns Benefit From This Treatment?</h4>
-        <p>Ageing skin, fine lines, wrinkles, hyperpigmentation, acne scarring, dull skin and clogged pores.</p>
-        <p>This course will teach you how to perform this treatment safely and effectively on clients, while teaching you how to market this service for increased salon turnover and a happier, loyal clientele.</p>
+        <a class="course-preview-card" href="<?php echo esc_url( home_url( '/microblading/' ) ); ?>">
+            <h3>Microblading Training</h3>
+            <ul class="course-meta">
+                <li><span>Duration</span>2&ndash;3 Days</li>
+                <li><span>Cost</span>From &euro;1,000</li>
+            </ul>
+            <p>Master the hand-stroke feathering technique for natural-looking eyebrows and eyeliner, with an optional professional starter kit.</p>
+            <span class="course-preview-link">View Course Details &rarr;</span>
+        </a>
 
-        <h4>Learning Outcomes</h4>
-        <p>By the end of this course, learners will be able to:</p>
-        <ul class="policy-list">
-            <li>List health &amp; safety rules regarding the application of Microdermabrasion treatments</li>
-            <li>Explain the professional ethics of consultation and application of this treatment</li>
-            <li>Produce a brief description of data protection laws applicable to the collection and protection of client data</li>
-            <li>Describe how a treatment room should be designed to comply with Local Authority regulations</li>
-            <li>Carry out a client consultation for Microdermabrasion treatment</li>
-            <li>List contra-indications to Microdermabrasion treatment</li>
-            <li>List indications for the treatment and when &amp; why it would be recommended</li>
-            <li>List product preparation for treatment</li>
-            <li>List client aftercare that must be provided at the end of each treatment</li>
-            <li>Describe the relevant anatomy &amp; physiology of the face and skin</li>
-            <li>List facts &amp; myths about this treatment</li>
-            <li>Explain and demonstrate how to use diamond head types</li>
-            <li>List equipment needed for the treatment</li>
-            <li>Produce a brief description of how to retail and advertise the treatment in a salon</li>
-            <li>Perform Microdermabrasion treatment on a client</li>
-        </ul>
+        <a class="course-preview-card" href="<?php echo esc_url( home_url( '/pmu/' ) ); ?>">
+            <h3>PMU Training</h3>
+            <ul class="course-meta">
+                <li><span>Duration</span>2&ndash;3 Days</li>
+                <li><span>Cost</span>From &euro;1,000</li>
+            </ul>
+            <p>Learn the machine-pigmentation method for eyebrows, lips and eyeliner using our patented Hanami Pigments approach.</p>
+            <span class="course-preview-link">View Course Details &rarr;</span>
+        </a>
 
-        <h4>Who Is This Course For?</h4>
-        <p>Any person who is already qualified in Beauty Therapy by CIBTAC, ITEC, VTCT, City &amp; Guilds, FETAC and/or CIDESCO.</p>
-    </div>
-
-    <div class="course-card">
-        <h3>Microneedling Mesotherapy</h3>
-        <ul class="course-meta">
-            <li><span>Duration</span>1 Day &middot; 10am&ndash;3pm</li>
-            <li><span>Location</span>BE Academy, Dublin</li>
-            <li><span>Certificate</span>AIT Accredited BE Microneedling Mesotherapy Certificate</li>
-            <li><span>Cost</span>&euro;400</li>
-        </ul>
-
-        <h4>Programme Overview</h4>
-        <p>Microneedling Mesotherapy is a minimally invasive treatment performed by a beauty therapist using micro-fine needles which pierce the skin, activating its natural wound-healing response and increasing the production of both collagen and elastin. The tiny punctures also allow for better absorption of ingredients such as Hyaluronic Acid, Collagen and Vitamin C.</p>
-
-        <h4>Which Skin Concerns Benefit From This Treatment?</h4>
-        <p>Ageing skin, fine lines, wrinkles, hyperpigmentation, acne scarring, sagginess and loss of elasticity or firmness in the skin.</p>
-        <p>This course will teach you how to perform this treatment safely and effectively on clients, while teaching you how to market this service for increased salon turnover and a happier, loyal clientele.</p>
-
-        <h4>Learning Outcomes</h4>
-        <p>By the end of this course, learners will be able to:</p>
-        <ul class="policy-list">
-            <li>List health &amp; safety rules regarding the application of Microneedling Mesotherapy treatments</li>
-            <li>Explain the professional ethics of consultation and application of this treatment</li>
-            <li>Produce a brief description of data protection laws applicable to the collection and protection of client data</li>
-            <li>Describe how a treatment room should be designed to comply with Local Authority regulations</li>
-            <li>Carry out a client consultation for Microneedling Mesotherapy treatment</li>
-            <li>List contra-indications to Microneedling Mesotherapy treatment</li>
-            <li>List indications for the treatment and when &amp; why it would be recommended</li>
-            <li>List product preparation for treatment</li>
-            <li>List client aftercare that must be provided at the end of each treatment</li>
-            <li>Describe the relevant anatomy &amp; physiology of the face and skin</li>
-            <li>List blood-borne pathogens and how to avoid contamination</li>
-            <li>List facts &amp; myths about this treatment</li>
-            <li>Explain how to use mesococktails</li>
-            <li>Explain and demonstrate how to use derma pen cartridges</li>
-            <li>List equipment needed for the treatment</li>
-            <li>Produce a brief description of how to retail and advertise the treatment in a salon</li>
-            <li>Perform Microneedling Mesotherapy treatment on a client</li>
-        </ul>
-
-        <h4>Who Is This Course For?</h4>
-        <p>Any person who is already qualified in Beauty Therapy by CIBTAC, ITEC, VTCT, City &amp; Guilds, FETAC and/or CIDESCO.</p>
-    </div>
-</section>
-
-<section class="training-pmu container">
-    <span class="eyebrow">Permanent Make Up Training</span>
-    <h2 class="stroke-heading">Microblading &amp; PMU Courses</h2>
-
-    <div class="pmu-course">
-        <h3>Microblading Training</h3>
-        <p>MICROBLADING is a feathering method for eyebrows and eyeliners, applied using pen strokes by hand. With MICROBLADING permanent eyeliner, you obtain the image of natural eyebrow hair and create subtle, well-defined eyes.</p>
-
-        <div class="pricing-grid">
-            <div class="pricing-card">
-                <h4>Two-Day Full Intensive Training</h4>
-                <p class="price">&euro;1,000</p>
-                <p class="price-note">MICROBLADING method for eyebrows or eyeliners</p>
-                <p class="price-addon">+ Professional Starter Kit &mdash; &euro;560</p>
-                <ul class="feature-list kit-list">
-                    <li><span class="feature-icon">&#10003;</span>6x Hanami Pigment 10ml</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Box of 29 Blades</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Comfort Gel</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Microblading Pen</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Pen Holder</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Ink Holder</li>
-                    <li><span class="feature-icon">&#10003;</span>30pcs Ink Cups</li>
-                    <li><span class="feature-icon">&#10003;</span>10pcs Rulers</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Mapping String</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Mapping Pencil</li>
-                </ul>
-            </div>
-            <div class="pricing-card">
-                <h4>Three-Day Full Intensive Training</h4>
-                <p class="price">&euro;1,400</p>
-                <p class="price-note">MICROBLADING method for eyebrows + eyeliners</p>
-                <p class="price-addon">+ Professional Starter Kit &mdash; &euro;560</p>
-                <ul class="feature-list kit-list">
-                    <li><span class="feature-icon">&#10003;</span>6x Hanami Pigment 10ml</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Box of 29 Blades</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Comfort Gel</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Microblading Pen</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Pen Holder</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Ink Holder</li>
-                    <li><span class="feature-icon">&#10003;</span>30pcs Ink Cups</li>
-                    <li><span class="feature-icon">&#10003;</span>10pcs Rulers</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Mapping String</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Mapping Pencil</li>
-                </ul>
-            </div>
-        </div>
-        <p class="pmu-note">If you have already completed your MICROBLADING training and would like to also train in PMU eyeliner and lips, you can buy one extra day of training.</p>
-    </div>
-
-    <div class="pmu-course">
-        <h3>PMU Training</h3>
-        <p>PMU is a pigmentation method used for eyebrows (powder effect / shading / ombre), lips and eyeliner lines, applied by machine. It gradually increases the amount of introduced pigment, building up a subtle look while reducing treatment time and any discomfort.</p>
-
-        <div class="pricing-grid">
-            <div class="pricing-card">
-                <h4>Two-Day Full Intensive Training</h4>
-                <p class="price">&euro;1,000</p>
-                <p class="price-note">PMU method for eyebrows, eyeliner or lips</p>
-            </div>
-            <div class="pricing-card">
-                <h4>Three-Day Full Intensive Training</h4>
-                <p class="price">&euro;1,400</p>
-                <p class="price-note">2 PMU areas of your own choice</p>
-            </div>
-        </div>
-
-        <h4 class="pmu-subheading">Equipment &amp; Starter Kits</h4>
-        <div class="pricing-grid">
-            <div class="pricing-card">
-                <h5>PMU Device Tifi II</h5>
-                <p class="price">&euro;1,000</p>
-            </div>
-            <div class="pricing-card">
-                <h5>Mini Starter Kit &mdash; Eyebrows</h5>
-                <p class="price">&euro;330</p>
-                <ul class="feature-list kit-list">
-                    <li><span class="feature-icon">&#10003;</span>Hanami Pigments Eyebrows set (7x 2ml)</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Comfort Gel</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Ink Holder</li>
-                    <li><span class="feature-icon">&#10003;</span>30pcs Ink Cups</li>
-                    <li><span class="feature-icon">&#10003;</span>10pcs Rulers</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Mapping String</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Mapping Pencil</li>
-                </ul>
-            </div>
-            <div class="pricing-card">
-                <h5>Deluxe Starter Kit &mdash; Eyebrows</h5>
-                <p class="price">&euro;510</p>
-                <ul class="feature-list kit-list">
-                    <li><span class="feature-icon">&#10003;</span>Hanami Pigments Eyebrows 6x 10ml</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Comfort Gel</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Ink Holder</li>
-                    <li><span class="feature-icon">&#10003;</span>30pcs Ink Cups</li>
-                    <li><span class="feature-icon">&#10003;</span>10pcs Rulers</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Mapping String</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Mapping Pencil</li>
-                </ul>
-            </div>
-            <div class="pricing-card">
-                <h5>Mini Starter Kit &mdash; Lips</h5>
-                <p class="price">&euro;290</p>
-                <ul class="feature-list kit-list">
-                    <li><span class="feature-icon">&#10003;</span>Hanami Pigments Lips set (6x 2ml)</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Comfort Gel</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Ink Holder</li>
-                    <li><span class="feature-icon">&#10003;</span>30pcs Ink Cups</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Mapping Pencil</li>
-                </ul>
-            </div>
-            <div class="pricing-card">
-                <h5>Deluxe Starter Kit &mdash; Lips</h5>
-                <p class="price">&euro;500</p>
-                <ul class="feature-list kit-list">
-                    <li><span class="feature-icon">&#10003;</span>Hanami Pigments Lips set (6x 10ml)</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Comfort Gel</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Ink Holder</li>
-                    <li><span class="feature-icon">&#10003;</span>30pcs Ink Cups</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Mapping Pencil</li>
-                </ul>
-            </div>
-            <div class="pricing-card">
-                <h5>Starter Kit &mdash; Eyeliner</h5>
-                <p class="price">&euro;285</p>
-                <ul class="feature-list kit-list">
-                    <li><span class="feature-icon">&#10003;</span>Hanami Pigments Eyeliner set (3x 5ml) + Hanami Pigment Warm Black (1x 10ml)</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Comfort Gel</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Ink Holder</li>
-                    <li><span class="feature-icon">&#10003;</span>30pcs Ink Cups</li>
-                    <li><span class="feature-icon">&#10003;</span>1x Mapping Pencil</li>
-                </ul>
-            </div>
-        </div>
-        <p class="pmu-note">If you have already completed our MICROBLADING training and would like to also train in PMU eyeliner and lips, you can buy one extra day of training &mdash; &euro;400.</p>
-    </div>
-
-    <div class="pmu-course">
-        <h3>Microblading + PMU Training</h3>
-        <div class="pricing-grid pricing-grid-single">
-            <div class="pricing-card">
-                <h4>Three-Day Full Intensive Training</h4>
-                <p class="price">&euro;1,400</p>
-                <p class="price-note">MICROBLADING method for eyebrows + PMU eyeliner, PMU eyebrows, eyeliner or lips</p>
-            </div>
-        </div>
-
-        <h4 class="pmu-subheading">What You&rsquo;ll Learn</h4>
-        <ul class="policy-list policy-list-two-col">
-            <li>Facial anatomy, structure of the skin</li>
-            <li>Colour theory</li>
-            <li>Hands-on practice on live models</li>
-            <li>Pigments and blending</li>
-            <li>Choosing the best colours</li>
-            <li>Analysing different skin types</li>
-            <li>Choosing anesthetics</li>
-            <li>Eyebrow and/or eyeliner designs or lips*</li>
-            <li>How to use anesthetics</li>
-            <li>Work station set-up</li>
-            <li>Protecting your equipment and tools*</li>
-            <li>Sterilisation &amp; sanitisation of the entire work station</li>
-            <li>Bloodborne pathogens and disease</li>
-            <li>Cross-contamination prevention</li>
-            <li>Patch testing</li>
-            <li>Allergic reactions</li>
-            <li>Medical forms and client consultation</li>
-            <li>The healing process</li>
-            <li>Aftercare instructions</li>
-            <li>Practical training on mannequins and models</li>
-        </ul>
-        <p class="training-footnote">* Depending on the chosen method, either TAFFY&reg; or ODED&reg;.</p>
+        <a class="course-preview-card" href="<?php echo esc_url( home_url( '/microblading-pmu/' ) ); ?>">
+            <h3>Microblading + PMU Training</h3>
+            <ul class="course-meta">
+                <li><span>Duration</span>3 Days</li>
+                <li><span>Cost</span>&euro;1,400</li>
+            </ul>
+            <p>Train in both methods together &mdash; microblading eyebrows plus PMU eyeliner, eyebrows or lips &mdash; in one combined intensive.</p>
+            <span class="course-preview-link">View Course Details &rarr;</span>
+        </a>
     </div>
 </section>
 

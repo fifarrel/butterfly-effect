@@ -19,7 +19,7 @@ Version: 1.0
   --gold:        #B9975B;
   --gold-soft:   #E8DCC4;
 
-  --font-display: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
+  --font-display: 'Jost', 'Cormorant', 'Cormorant Garamond', Georgia, serif;
   --font-body:    'Inter', -apple-system, sans-serif;
 
   --max-width: 1200px;
@@ -46,7 +46,7 @@ img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 h1, h2, h3 {
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 300;
   letter-spacing: .015em;
   line-height: 1.1;
   margin: 0 0 .5em;
@@ -1311,30 +1311,8 @@ a.menu-item-head:hover .menu-item-arrow { transform: translateX(4px); }
 
 .training-courses { padding: 5.5rem 0 1rem; }
 .training-courses .eyebrow,
-.training-pmu .eyebrow,
 .training-prep .eyebrow,
 .training-results .eyebrow { justify-content: flex-start; }
-
-.course-card {
-  padding: 3rem 0;
-  border-top: 1px solid var(--line);
-}
-.course-card:last-child { padding-bottom: 0; }
-.course-card h3 {
-  font-size: clamp(1.5rem, 2.6vw, 2rem);
-  color: var(--rose-deep);
-  margin-bottom: 1.5rem;
-}
-.course-card h4 {
-  font-family: var(--font-body);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  font-size: .8rem;
-  color: var(--gold);
-  margin: 2rem 0 .85rem;
-}
-.course-card p { color: var(--ink-soft); line-height: 1.8; margin: 0 0 1rem; }
 
 .course-meta {
   list-style: none;
@@ -1356,23 +1334,6 @@ a.menu-item-head:hover .menu-item-arrow { transform: translateX(4px); }
   color: var(--gold);
 }
 
-.training-pmu { padding: 4.5rem 0; }
-.pmu-course {
-  padding: 3rem 0;
-  border-top: 1px solid var(--line);
-}
-.pmu-course:last-child { padding-bottom: 0; }
-.pmu-course h3 {
-  font-size: clamp(1.5rem, 2.6vw, 2rem);
-  color: var(--rose-deep);
-  margin-bottom: 1rem;
-}
-.pmu-course > p {
-  color: var(--ink-soft);
-  line-height: 1.8;
-  max-width: 780px;
-  margin: 0 0 2rem;
-}
 .pmu-subheading {
   font-family: var(--font-body);
   font-weight: 600;
@@ -1489,6 +1450,139 @@ a.menu-item-head:hover .menu-item-arrow { transform: translateX(4px); }
   text-align: center;
 }
 .training-cancellation .policy-list { align-items: center; }
+
+/* =========================================================
+   TRAINING COURSE PAGE (individual course)
+   ========================================================= */
+.course-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .76rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--rose);
+  margin-bottom: 1.75rem;
+}
+.course-back-link:hover { color: var(--rose-deep); }
+
+.facts-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 3.5rem;
+}
+.fact-item {
+  background: var(--white);
+  padding: 1.85rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.fact-value {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--rose-deep);
+  line-height: 1.2;
+}
+.fact-label {
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: .66rem;
+  color: var(--gold);
+}
+
+.course-content { padding: 5rem 0; }
+.course-content .pmu-subheading:first-child { margin-top: 0; }
+.course-content p { color: var(--ink-soft); line-height: 1.8; margin: 0 0 1rem; }
+
+/* =========================================================
+   TRAINING OVERVIEW — COURSE PREVIEW CARDS
+   ========================================================= */
+.course-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--gap);
+  margin-top: 3rem;
+}
+.course-preview-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 2.25rem 2rem;
+  cursor: pointer;
+  transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+.course-preview-card:hover,
+.course-preview-card:focus-visible {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 34px -20px rgba(46, 36, 56, .35);
+}
+.course-preview-card h3 {
+  font-size: 1.4rem;
+  color: var(--rose-deep);
+  margin-bottom: .75rem;
+}
+.course-preview-card p {
+  color: var(--ink-soft);
+  line-height: 1.75;
+  margin: 0 0 1.5rem;
+  flex-grow: 1;
+}
+.course-preview-card .course-meta {
+  margin: 0 0 1.75rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line);
+  gap: 1.25rem 2rem;
+}
+.course-preview-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--rose-deep);
+  transition: color .25s ease;
+}
+.course-preview-card:hover .course-preview-link { color: var(--rose); }
+
+/* =========================================================
+   SMART SKIN SURVEY PAGE
+   ========================================================= */
+.survey-hero {
+  padding: 5.5rem 0 3rem;
+  text-align: center;
+  background:
+    radial-gradient(60% 120% at 50% 0%, rgba(185,151,91,.10), transparent 70%),
+    var(--bg);
+}
+.survey-hero h1 {
+  font-size: clamp(2.4rem, 4.6vw, 3.8rem);
+  color: var(--rose-deep);
+}
+.survey-hero p {
+  max-width: 620px;
+  margin: 1.5rem auto 0;
+  color: var(--ink-soft);
+  line-height: 1.8;
+}
+.survey-embed {
+  padding: 0 0 6rem;
+}
+.survey-embed iframe {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  border: 0;
+  border-radius: var(--radius);
+}
 
 @media (max-width: 640px) {
   .course-meta { gap: 1.25rem 2rem; }

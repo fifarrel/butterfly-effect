@@ -38,6 +38,12 @@
             <span class="category-btn-label">Aesthetic Medicine</span>
         </span>
     </a>
+    <a href="<?php echo esc_url( home_url( '/smart-skin-survey/' ) ); ?>" class="category-btn">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/be-logo.png" alt="" class="category-btn-logo">
+        <span class="category-btn-content">
+            <span class="category-btn-label">Smart Skin Survey</span>
+        </span>
+    </a>
 </section>
 
 <section class="about-split">

@@ -51,6 +51,7 @@
                     </li>
                     <li><a href="<?php echo esc_url( home_url( '/treatments/' ) ); ?>">Treatments</a></li>
                     <li><a href="<?php echo esc_url( home_url( '/training/' ) ); ?>">Training</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/smart-skin-survey/' ) ); ?>">Smart Skin Survey</a></li>
                 </ul>
             </nav>
             <a href="https://butterflyeffect.versum.com/" class="btn header-cta" target="_blank" rel="noopener">Book Now</a>

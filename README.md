@@ -99,3 +99,15 @@ git pull
 - **Plugins** — install directly via wp-admin if/when needed
 - **Uploads / media library** — local to each machine, not version controlled
 - **Database content** (pages, posts, settings) — lives in each person's local MySQL instance, not in git. If you need to sync actual site content (not just code) between machines, ask Finn — that needs a database export/import rather than git.
+
+## Page templates need a matching WordPress Page
+
+Several top-level pages (Treatments, Training, Permanent Makeup, Smart Skin Survey, etc.) are built as `page-{slug}.php` template files in this theme — e.g. `page-smart-skin-survey.php` is used automatically by WordPress's template hierarchy, but **only once a WordPress Page with the matching slug exists in the database**.
+
+Since database content isn't in git (see above), pulling this repo's code alone is not enough. On each environment (your local site, a teammate's local site, production), you also need to manually create the Page in wp-admin:
+
+1. **Pages → Add New**
+2. Give it the matching title (WordPress will auto-generate the slug — check it matches the template filename, e.g. title "Smart Skin Survey" → slug `smart-skin-survey`)
+3. Publish it (the content/blocks you add don't matter — the template file fully controls what renders)
+
+Forgetting this step is why a button/link to a new page can work on one machine and 404 on another even though the code is identical.
