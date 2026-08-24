@@ -4,7 +4,7 @@
     <div class="container">
         <span class="eyebrow">Menu / Therapies</span>
         <h1 class="stroke-heading">Treatments</h1>
-        <p>Explore our full range of skin, beauty &amp; permanent make up therapies. Select a category below to view treatments &amp; book online.</p>
+        <p>Explore our full range of permanent makeup, skin &amp; beauty treatments at Butterfly Effect, Rathfarnham. Select a category below to view treatments &amp; book online.</p>
     </div>
 </section>
 
@@ -16,6 +16,7 @@
                 <span class="menu-item-num">01</span>
                 <span class="menu-item-title">Skin Therapies</span>
             </div>
+            <p class="menu-item-desc">Targeted facial &amp; skin treatments for hydration, anti-ageing, acne, redness and pigmentation &mdash; using Korean, Image &amp; Essencial Skincare ranges plus advanced aesthetic medicine.</p>
             <ul class="menu-sub-list">
                 <li>
                     <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
@@ -139,6 +140,7 @@
                 <span class="menu-item-title">EMS Chair</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
+            <p class="menu-item-desc">Electromagnetic muscle stimulation to tone &amp; strengthen pelvic floor and core muscles &mdash; a comfortable, non-invasive seated treatment.</p>
         </li>
 
         <li class="menu-item">
@@ -147,6 +149,7 @@
                 <span class="menu-item-title">Eye Treatments</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
+            <p class="menu-item-desc">Lash lift &amp; tint, brow tint &amp; shape, and eyelash extensions to define and enhance your natural eyes.</p>
         </li>
 
         <li class="menu-item">

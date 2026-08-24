@@ -3,8 +3,8 @@
 <section class="hero">
     <div class="container hero-grid">
         <div class="hero-content">
-            <h1 class="stroke-heading">Welcome to Butterfly Effect</h1>
-            <p>Professional, Rathfarnham based Permanent Make Up &amp; Beauty Salon.</p>
+            <h1 class="stroke-heading">Permanent Makeup &amp; Beauty Salon in Rathfarnham</h1>
+            <p>Welcome to Butterfly Effect &mdash; professional, Rathfarnham based Permanent Make Up &amp; Beauty Salon.</p>
             <a href="https://butterflyeffect.versum.com/" class="btn" target="_blank" rel="noopener">Book Now</a>
         </div>
         <div class="hero-photo">
@@ -137,7 +137,7 @@
 
 <section class="gallery-grid container">
     <?php for ( $i = 1; $i <= 8; $i++ ) : ?>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/gallery-<?php echo $i; ?>.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/gallery-<?php echo $i; ?>.jpg" alt="Permanent makeup & beauty treatment results at Butterfly Effect, Rathfarnham">
     <?php endfor; ?>
 </section>
 

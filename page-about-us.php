@@ -11,10 +11,10 @@
 </section>
 
 <section class="about-text container">
-    <h2 class="about-text-heading">Meet Our Team – Butterfly Effect Beauty Salon Rathfarnham</h2>
+    <h2 class="about-text-heading">Rathfarnham's Permanent Makeup &amp; Beauty Salon</h2>
 
     <div class="about-text-body">
-        <p>We specialize in the most natural looking semi-permanent makeup treatments for eyebrows (microblading), eyeliner &amp; lips. Our Rathfarnham based beauty salon offer range of beauty treatments like permanent makeup, microdermabrasion, hair removal, wax therapies, needle-free wrinkle fillers, eyelash extension, micro-needling mesotherapy, nail polish and nail gel art, spray tan just to name a few.</p>
+        <p>We specialize in the most natural looking semi-permanent makeup treatments for eyebrows (microblading), eyeliner &amp; lips. Our Rathfarnham based beauty salon offers a range of beauty treatments including permanent makeup, microdermabrasion, hair removal, wax therapies, needle-free wrinkle fillers, eyelash extension, micro-needling mesotherapy, nail polish and nail gel art, and spray tan, just to name a few.</p>
         <p>Bring out the best of yourself with our permanent makeup treatments — always beautiful, always natural-looking, never fake. It's everyday perfection without the day-to-day effort.</p>
     </div>
 
@@ -27,26 +27,26 @@
     <div class="team-grid-list">
         <div class="team-member">
             <div class="team-photo-frame">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/team/aleksandra.jpg" alt="Aleksandra">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/new%20assets/aleksandra_headshot.PNG" alt="Aleksandra, Head Cosmetologist at Butterfly Effect Beauty Salon Rathfarnham">
             </div>
-            <h2>Aleksandra</h2>
-            <h3 class="team-role">Head Cosmetologist</h3>
+            <h3>Aleksandra</h3>
+            <h4 class="team-role">Head Cosmetologist</h4>
             <p>Aleksandra – A skilled Cosmetologist, who has ten years experience in the beauty industry, heads Butterfly Effect. Highly qualified in a full number of courses, she has an endless amount of certifications and classes under her belt. She is always excited to learn about new beauty products and treatments so that she can pass them onto her clientele, and is very happy to answer any of your questions and concerns. Permanent makeup is a highly skilled, intricate procedure. It also requires artistry and an eye for detail. Aleksandra has honed these skills as well as her many qualifications in beauty to create perfect, affordable results.</p>
         </div>
         <div class="team-member">
             <div class="team-photo-frame">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/team/aneta.jpg" alt="Aneta">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/new%20assets/aneta_headshot.PNG" alt="Aneta, Beauty Therapist at Butterfly Effect Beauty Salon Rathfarnham">
             </div>
-            <h2>Aneta</h2>
-            <h3 class="team-role">Beauty therapist</h3>
+            <h3>Aneta</h3>
+            <h4 class="team-role">Beauty therapist</h4>
             <p>Aneta is a fully qualified beauty therapist with 11 years of experience. Her specialties include facials, waxing and pedicures. Aneta is excited to continuously learn about new techniques and treatments and enjoys trying new products. Her main goal is to resolve any beauty issues a client may be dealing with, but she also hopes her clients leave in a lighter mood – more relaxed and comfortable. She aims to make the salon a special place where clients can forget about the cares of the world for a while.</p>
         </div>
         <div class="team-member">
             <div class="team-photo-frame">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/team/hannah.jpg" alt="Hannah">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/new%20assets/hannah_headshot.PNG" alt="Hannah, Beauty Therapist at Butterfly Effect Beauty Salon Rathfarnham">
             </div>
-            <h2>Hannah</h2>
-            <h3 class="team-role">Beauty therapist</h3>
+            <h3>Hannah</h3>
+            <h4 class="team-role">Beauty therapist</h4>
             <p>Hannah has over 20 years of experience in the beauty industry. She began her training as a Beauty Therapist in Poland and later enhanced her knowledge at the Holistic College in Dublin.
 
 Her passion for the beauty industry stems from her creative nature and her commitment to helping clients feel confident and beautiful both inside and out.
@@ -57,18 +57,18 @@ She specializes in advanced skincare, eyebrow shaping, waxing, pedicures, manicu
         </div>
         <div class="team-member">
             <div class="team-photo-frame">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/team/magda.jpg" alt="Magda">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/new%20assets/magda_headshot.PNG" alt="Magda, Beauty Therapist at Butterfly Effect Beauty Salon Rathfarnham">
             </div>
-            <h2>Magda</h2>
-            <h3 class="team-role">Beauty therapist</h3>
+            <h3>Magda</h3>
+            <h4 class="team-role">Beauty therapist</h4>
             <p>Magda is a qualified beauty therapist and eyelash extension stylist. She has great satisfaction in helping her clients look and feel their best. Her favorite treatments include eyelash extension, pedicures, waxing. She also enjoys being able to treat peoples skin concerns in a facial as this can improve someone s confidence. Magda loves to make clients feel beautiful and comfortable in their own skin and believes everyone should be pampered from time to time.</p>
         </div>
         <div class="team-member">
             <div class="team-photo-frame">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/team/Rachel.jpg" alt="Rachel">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/new%20assets/rachel_headshot.PNG" alt="Rachel, Beauty Therapist & Front of House at Butterfly Effect Beauty Salon Rathfarnham">
             </div>
-            <h2>Rachel</h2>
-            <h3 class="team-role">Beauty therapist & Front of house</h3>
+            <h3>Rachel</h3>
+            <h4 class="team-role">Beauty therapist & Front of house</h4>
             <p>Rachel is a Cidesco qualified beauty therapist. With a passion for brows, makeup application & Skin treatments. She does a range of treatments such as lvl lash lift, spray tanning, body scrubs / masks & waxing. She graduated top of her class in beauty school and is always eager to learn new treatments to offer clients. Rachel takes each client as a priority and makes sure they leave the salon feeling confident and fabulous.   </p>
         </div>
     </div>

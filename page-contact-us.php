@@ -4,6 +4,7 @@
     <div class="container">
         <span class="eyebrow">Get In Touch</span>
         <h1 class="stroke-heading">Contact Us</h1>
+        <p>Get in touch to book permanent makeup, microblading, skincare or any of our <a href="<?php echo esc_url( home_url( '/treatments/' ) ); ?>">beauty treatments</a> at our Rathfarnham Village salon.</p>
     </div>
 </section>
 
