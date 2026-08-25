@@ -20,36 +20,6 @@
             <ul class="menu-sub-list">
                 <li>
                     <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
-                        <span class="menu-sub-name">Korean Skincare</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
-                        <span class="menu-sub-name">Image Skincare</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
-                        <span class="menu-sub-name">Essencial Skincare</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
-                        <span class="menu-sub-name">Aesthetic Medicine</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
-                        <span class="menu-sub-name">Hair Treatments</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
-                        <span class="menu-sub-name">Hydrating &amp; Plumping</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
                         <span class="menu-sub-name">Rejuvenation &amp; Anti-Ageing</span>
                     </a>
                 </li>
@@ -77,8 +47,56 @@
         </li>
 
         <li class="menu-item">
-            <a class="menu-item-head" href="<?php echo esc_url( home_url( '/permanent-makeup/' ) ); ?>">
+            <a class="menu-item-head" href="https://butterflyeffect.versum.com/?trade=852440" target="_blank" rel="noopener">
                 <span class="menu-item-num">02</span>
+                <span class="menu-item-title">Korean Skincare</span>
+                <span class="menu-item-arrow">&rarr;</span>
+            </a>
+        </li>
+
+        <li class="menu-item">
+            <a class="menu-item-head" href="https://butterflyeffect.versum.com/?trade=486069" target="_blank" rel="noopener">
+                <span class="menu-item-num">03</span>
+                <span class="menu-item-title">Image Skincare</span>
+                <span class="menu-item-arrow">&rarr;</span>
+            </a>
+        </li>
+
+        <li class="menu-item">
+            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                <span class="menu-item-num">04</span>
+                <span class="menu-item-title">Essencial Skincare</span>
+                <span class="menu-item-arrow">&rarr;</span>
+            </a>
+        </li>
+
+        <li class="menu-item">
+            <a class="menu-item-head" href="https://butterflyeffect.versum.com/?trade=752454" target="_blank" rel="noopener">
+                <span class="menu-item-num">05</span>
+                <span class="menu-item-title">Aesthetic Medicine</span>
+                <span class="menu-item-arrow">&rarr;</span>
+            </a>
+        </li>
+
+        <li class="menu-item">
+            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                <span class="menu-item-num">06</span>
+                <span class="menu-item-title">Hair Treatments</span>
+                <span class="menu-item-arrow">&rarr;</span>
+            </a>
+        </li>
+
+        <li class="menu-item">
+            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                <span class="menu-item-num">07</span>
+                <span class="menu-item-title">Hydrating &amp; Plumping</span>
+                <span class="menu-item-arrow">&rarr;</span>
+            </a>
+        </li>
+
+        <li class="menu-item">
+            <a class="menu-item-head" href="<?php echo esc_url( home_url( '/permanent-makeup/' ) ); ?>">
+                <span class="menu-item-num">08</span>
                 <span class="menu-item-title">Permanent Make Up</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
@@ -86,7 +104,7 @@
 
         <li class="menu-item">
             <div class="menu-item-head">
-                <span class="menu-item-num">03</span>
+                <span class="menu-item-num">09</span>
                 <span class="menu-item-title">Supportive &amp; Restorative Care</span>
             </div>
             <p class="menu-item-desc">Specialised care for clients during &amp; after cancer treatments, including oncology-safe skin treatments, permanent make up and areola reconstruction.</p>
@@ -94,12 +112,12 @@
 
         <li class="menu-item">
             <div class="menu-item-head">
-                <span class="menu-item-num">04</span>
+                <span class="menu-item-num">10</span>
                 <span class="menu-item-title">Hair Removal</span>
             </div>
             <ul class="menu-sub-list">
                 <li>
-                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                    <a href="https://butterflyeffect.versum.com/?trade=722912" target="_blank" rel="noopener">
                         <span class="menu-sub-name">SHR</span>
                         <span class="menu-sub-desc">Super Hair Removal &mdash; a fast, long-lasting alternative to traditional laser hair reduction, suitable for all skin tones.</span>
                     </a>
@@ -115,7 +133,7 @@
 
         <li class="menu-item">
             <div class="menu-item-head">
-                <span class="menu-item-num">05</span>
+                <span class="menu-item-num">11</span>
                 <span class="menu-item-title">PMU &amp; Tattoo Removal</span>
             </div>
             <ul class="menu-sub-list">
@@ -136,7 +154,7 @@
 
         <li class="menu-item">
             <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
-                <span class="menu-item-num">06</span>
+                <span class="menu-item-num">12</span>
                 <span class="menu-item-title">EMS Chair</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
@@ -144,8 +162,8 @@
         </li>
 
         <li class="menu-item">
-            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
-                <span class="menu-item-num">07</span>
+            <a class="menu-item-head" href="https://butterflyeffect.versum.com/?trade=255044" target="_blank" rel="noopener">
+                <span class="menu-item-num">13</span>
                 <span class="menu-item-title">Eye Treatments</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
@@ -154,18 +172,18 @@
 
         <li class="menu-item">
             <div class="menu-item-head">
-                <span class="menu-item-num">08</span>
+                <span class="menu-item-num">14</span>
                 <span class="menu-item-title">Hands &amp; Feet</span>
             </div>
             <ul class="menu-sub-list">
                 <li>
-                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                    <a href="https://butterflyeffect.versum.com/?trade=255042" target="_blank" rel="noopener">
                         <span class="menu-sub-name">Hands</span>
                         <span class="menu-sub-desc">Manicures, gel &amp; nail art.</span>
                     </a>
                 </li>
                 <li>
-                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                    <a href="https://butterflyeffect.versum.com/?trade=255043" target="_blank" rel="noopener">
                         <span class="menu-sub-name">Feet</span>
                         <span class="menu-sub-desc">Pedicures &amp; foot care.</span>
                     </a>
@@ -175,18 +193,18 @@
 
         <li class="menu-item">
             <div class="menu-item-head">
-                <span class="menu-item-num">09</span>
+                <span class="menu-item-num">15</span>
                 <span class="menu-item-title">Body Treatments</span>
             </div>
             <ul class="menu-sub-list">
                 <li>
-                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                    <a href="https://butterflyeffect.versum.com/?trade=255050" target="_blank" rel="noopener">
                         <span class="menu-sub-name">Massage</span>
                         <span class="menu-sub-desc">Swedish &amp; holistic massage therapy to relax and restore.</span>
                     </a>
                 </li>
                 <li>
-                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                    <a href="https://butterflyeffect.versum.com/?trade=255049" target="_blank" rel="noopener">
                         <span class="menu-sub-name">Body Scrub</span>
                         <span class="menu-sub-desc">Exfoliating body scrubs &amp; masks for smoother, healthier skin.</span>
                     </a>
@@ -196,47 +214,11 @@
 
         <li class="menu-item">
             <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
-                <span class="menu-item-num">10</span>
+                <span class="menu-item-num">16</span>
                 <span class="menu-item-title">Price List</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
         </li>
-
-        <li class="menu-item">
-            <div class="menu-item-head">
-                <span class="menu-item-num">11</span>
-                <span class="menu-item-title">Buy Gift Voucher</span>
-            </div>
-            <ul class="menu-sub-list">
-                <li>
-                    <a href="https://butterflyeffect.versum.com/vouchers/items" target="_blank" rel="noopener">
-                        <span class="menu-sub-name">Digital Gift Card</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://shop.bepermanentmakeup.ie/39-gift-vouchers" target="_blank" rel="noopener">
-                        <span class="menu-sub-name">Paper Voucher</span>
-                    </a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="menu-item">
-            <a class="menu-item-head" href="https://shop.bepermanentmakeup.ie/" target="_blank" rel="noopener">
-                <span class="menu-item-num">12</span>
-                <span class="menu-item-title">Online Shop</span>
-                <span class="menu-item-arrow">&rarr;</span>
-            </a>
-        </li>
-
-        <li class="menu-item">
-            <a class="menu-item-head" href="<?php echo esc_url( home_url( '/training/' ) ); ?>">
-                <span class="menu-item-num">13</span>
-                <span class="menu-item-title">Training Courses</span>
-                <span class="menu-item-arrow">&rarr;</span>
-            </a>
-        </li>
-
     </ol>
 </section>
 

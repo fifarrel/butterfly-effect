@@ -111,3 +111,55 @@ Since database content isn't in git (see above), pulling this repo's code alone 
 3. Publish it (the content/blocks you add don't matter — the template file fully controls what renders)
 
 Forgetting this step is why a button/link to a new page can work on one machine and 404 on another even though the code is identical.
+
+## Deploying to production
+
+The Local setup above is for development only. Going live means standing up a **separate** WordPress install on real hosting and getting this theme's code onto it — see [What's NOT in this repo](#whats-not-in-this-repo-and-why) above for why WordPress core, plugins, and the database aren't part of this.
+
+### 1. Pick hosting
+
+Any host that runs WordPress (PHP + MySQL) works. Managed WP hosts (WP Engine, Kinsta, etc.) handle server config, SSL, and backups for you; general hosting (a VPS, cPanel) gives more control but more setup work.
+
+### 2. Point the domain
+
+Update the domain's DNS (A record or nameservers, depending on the host) to point at the new hosting. This can take a few hours to propagate.
+
+### 3. Install WordPress on the host
+
+Same idea as [step 2](#2-create-a-new-wordpress-site) locally, but on the live server — most hosts have a one-click WordPress installer, or pre-install it for you.
+
+### 4. Deploy the theme code
+
+Get `butterfly-theme` into the host's `wp-content/themes/` folder. Two options depending on what the host supports:
+
+- **Git-based hosts (SSH access):** `git clone` this repo directly into `wp-content/themes/butterfly-theme` on the server, same as [step 5](#5-clone-this-repo-into-the-themes-folder) locally. On future deploys, `git pull` there to update.
+- **Upload-only hosts (no SSH):** zip the `butterfly-theme` folder and upload it via wp-admin → **Appearance → Themes → Add New → Upload Theme**.
+
+### 5. Activate the theme
+
+wp-admin → **Appearance → Themes** → activate **butterfly-theme**.
+
+### 6. Recreate the required Pages
+
+See [Page templates need a matching WordPress Page](#page-templates-need-a-matching-wordpress-page) above — this is a fresh WordPress install, so none of those Pages exist yet. Create each one (About Us, Treatments, Training, Smart Skin Survey, etc.) with the matching slug before pointing the live domain at it.
+
+### 7. Install needed plugins
+
+Whatever you're relying on locally (SEO, forms, caching, security) needs to be installed fresh on the host too — plugins aren't in this repo (see above).
+
+### 8. Turn off debug output
+
+In the live site's `wp-config.php`, make sure debug settings are off (opposite of [step 8](#8-optional-enable-debugging) locally):
+
+```php
+define( 'WP_DEBUG', false );
+define( 'WP_DEBUG_DISPLAY', false );
+```
+
+Leaving `WP_DEBUG_DISPLAY` on in production shows PHP errors/warnings directly on the page to visitors.
+
+### 9. Final checks
+
+- Force HTTPS and confirm the SSL certificate is active
+- Test the dark mode toggle and the header/footer marble effects render correctly
+- Set up a backup schedule if the host doesn't do it automatically

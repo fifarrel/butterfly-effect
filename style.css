@@ -36,6 +36,17 @@ Version: 1.0
      contrast regardless of light/dark theme. */
   --btn-gradient:       linear-gradient(135deg, #7B5B99 0%, #4A2E63 100%);
   --btn-gradient-hover: linear-gradient(135deg, #4A2E63 0%, #33203F 100%);
+
+  /* Header marble veining is multiplied (dark veins) on the light header
+     background, then swaps to screened white veins in dark mode — see
+     dark-theme overrides below and .site-header::before. */
+  --marble-veins: 74,46,99;
+  --marble-blend: multiply;
+
+  /* Page-hero gold glow: the light bg is already near-max lightness, so the
+     radial gradient needs a much higher alpha than in dark mode to read as
+     a warm highlight instead of washing out — see dark-theme overrides. */
+  --hero-glow-alpha: .22;
 }
 
 /* =========================================================
@@ -54,11 +65,14 @@ Version: 1.0
     --gold-soft:   #7A5D2E;
     --panel:       #2C2135;
     --surface:     #2C2135;
+    --marble-veins: 255,255,255;
+    --marble-blend: screen;
+    --hero-glow-alpha: .10;
   }
 }
 :root[data-theme="dark"] {
   --bg:          #1B1420;
-  --bg-alt:      #4f3960;
+  --bg-alt:      #23192B;
   --ink:         #F1E8F6;
   --ink-soft:    #B8A7C5;
   --rose:        #C79FE8;
@@ -66,8 +80,11 @@ Version: 1.0
   --line:        #3A2E44;
   --gold:        #D8B172;
   --gold-soft:   #7A5D2E;
-  --panel:       #493658;
+  --panel:       #2C2135;
   --surface:     #2C2135;
+  --marble-veins: 255,255,255;
+  --marble-blend: screen;
+  --hero-glow-alpha: .10;
 }
 
 /* =========================================================
@@ -125,7 +142,6 @@ h1, h2, h3 {
    TOP UTILITY BAR
    ========================================================= */
 .top-bar {
-  background: var(--bg);
   color: var(--ink);
   font-size: .76rem;
   letter-spacing: .04em;
@@ -191,6 +207,33 @@ h1, h2, h3 {
   z-index: 40;
   background: var(--bg);
   border-bottom: 1px solid var(--line);
+}
+/* Faux marble veining, matching the footer treatment (see .site-footer::before)
+   but color/blend-swapped per theme via --marble-veins & --marble-blend, since
+   the header background flips light/dark instead of staying a fixed dark panel. */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  mix-blend-mode: var(--marble-blend);
+  background:
+    linear-gradient(128deg, transparent 41%, rgba(var(--marble-veins),.10) 42%, rgba(var(--marble-veins),.02) 43.5%, transparent 45%),
+    linear-gradient(64deg, transparent 17%, rgba(185,151,91,.16) 18%, transparent 20%),
+    linear-gradient(154deg, transparent 58%, rgba(var(--marble-veins),.07) 59%, rgba(var(--marble-veins),.05) 59.6%, transparent 61%),
+    linear-gradient(38deg, transparent 76%, rgba(185,151,91,.12) 77%, transparent 79%),
+    linear-gradient(101deg, transparent 8%, rgba(var(--marble-veins),.05) 9%, transparent 11%),
+    linear-gradient(172deg, transparent 88%, rgba(var(--marble-veins),.06) 89%, transparent 91%),
+    radial-gradient(65% 55% at 18% 12%, rgba(var(--marble-veins),.07), transparent 60%),
+    radial-gradient(55% 50% at 82% 78%, rgba(185,151,91,.14), transparent 65%),
+    radial-gradient(45% 40% at 62% 25%, rgba(var(--marble-veins),.04), transparent 60%),
+    radial-gradient(50% 45% at 30% 85%, rgba(var(--marble-veins),.03), transparent 60%);
+}
+.site-header > .top-bar,
+.site-header > .container {
+  position: relative;
+  z-index: 1;
 }
 .site-header-row {
   display: flex;
@@ -543,7 +586,7 @@ h1, h2, h3 {
   padding: 5.5rem 0 4rem;
   text-align: center;
   background:
-    radial-gradient(60% 120% at 50% 0%, rgba(185,151,91,.10), transparent 70%),
+    radial-gradient(60% 120% at 50% 0%, rgba(185,151,91,var(--hero-glow-alpha)), transparent 70%),
     var(--bg);
 }
 .about-hero h1 {
@@ -679,7 +722,7 @@ h1, h2, h3 {
   padding: 5.5rem 0 3rem;
   text-align: center;
   background:
-    radial-gradient(60% 120% at 50% 0%, rgba(185,151,91,.10), transparent 70%),
+    radial-gradient(60% 120% at 50% 0%, rgba(185,151,91,var(--hero-glow-alpha)), transparent 70%),
     var(--bg);
 }
 .treatments-hero h1 {
@@ -1336,7 +1379,7 @@ a.menu-item-head:hover .menu-item-arrow { transform: translateX(4px); }
   padding: 5.5rem 0 4rem;
   text-align: center;
   background:
-    radial-gradient(60% 120% at 50% 0%, rgba(185,151,91,.10), transparent 70%),
+    radial-gradient(60% 120% at 50% 0%, rgba(185,151,91,var(--hero-glow-alpha)), transparent 70%),
     var(--bg);
 }
 .training-hero h1 {
@@ -1656,7 +1699,7 @@ a.menu-item-head:hover .menu-item-arrow { transform: translateX(4px); }
   padding: 5.5rem 0 3rem;
   text-align: center;
   background:
-    radial-gradient(60% 120% at 50% 0%, rgba(185,151,91,.10), transparent 70%),
+    radial-gradient(60% 120% at 50% 0%, rgba(185,151,91,var(--hero-glow-alpha)), transparent 70%),
     var(--bg);
 }
 .survey-hero h1 {
