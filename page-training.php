@@ -38,8 +38,10 @@
 </section>
 
 <section class="training-courses container">
-    <span class="eyebrow">Our Training &amp; Courses</span>
-    <h2 class="stroke-heading">Course Offering</h2>
+    <div class="section-head">
+        <span class="eyebrow">Our Training &amp; Courses</span>
+        <h2 class="stroke-heading">Course Offering</h2>
+    </div>
 
     <div class="course-preview-grid">
         <a class="course-preview-card" href="<?php echo esc_url( home_url( '/microdermabrasion/' ) ); ?>">
@@ -95,8 +97,10 @@
 </section>
 
 <section class="training-prep container">
-    <span class="eyebrow">Before You Start</span>
-    <h2 class="stroke-heading">Training Stipulations</h2>
+    <div class="section-head">
+        <span class="eyebrow">Before You Start</span>
+        <h2 class="stroke-heading">Training Stipulations</h2>
+    </div>
     <p>Even though you have to be a qualified beautician before you can be accepted onto our courses, you will still need to do some pre-course study. To receive our pre-study manual, you must pay a 30% deposit for the course.</p>
 
     <h3 class="training-prep-subheading">Courses Preparation</h3>
@@ -107,8 +111,10 @@
 </section>
 
 <section class="training-results container">
-    <span class="eyebrow">Before &amp; After</span>
-    <h2 class="stroke-heading">See the Results</h2>
+    <div class="section-head">
+        <span class="eyebrow">Before &amp; After</span>
+        <h2 class="stroke-heading">See the Results</h2>
+    </div>
     <ul class="policy-list">
         <li>MICROBLADING reconstruction of eyebrows &amp; eyeliners after chemotherapy</li>
         <li>Lip &amp; eyeliner pigmentation using our patented device</li>

@@ -60,6 +60,8 @@
                 <span class="menu-item-title">Image Skincare</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
+                <span class="menu-sub-desc">A clinical results-driven facial designed to give beautifully lifted, firmer, deep cleansing, and glow. The treatment uses a blend of powerful antioxidant protection, nutrition and enzymes, and stem cells all sandwiched together to provide immediate measurable differences for the discerning client.</span>
+
         </li>
 
         <li class="menu-item">
@@ -76,6 +78,7 @@
                 <span class="menu-item-title">Aesthetic Medicine</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
+            <p class="menu-item-desc"></p>
         </li>
 
         <li class="menu-item">
@@ -100,6 +103,7 @@
                 <span class="menu-item-title">Permanent Make Up</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
+            <p class="menu-item-desc">Semi-permanent cosmetic tattooing including natural eyeliner, soft eyebrow shading &amp; microblading, and areola reconstruction for clients post-mastectomy &mdash; long-lasting definition tailored to your features.</p>
         </li>
 
         <li class="menu-item">
@@ -140,13 +144,20 @@
                 <li>
                     <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
                         <span class="menu-sub-name">Laser PMU &amp; Tattoo Removal</span>
-                        <span class="menu-sub-desc">Safe, gradual fading of permanent make up &amp; tattoos using laser technology.</span>
+                        <span class="menu-sub-desc">Laser tattoo removal is a safe and effective treatment designed to fade or fully remove unwanted tattoos. Advanced laser technology delivers targeted energy into the skin, breaking down tattoo ink particles into smaller fragments that are naturally eliminated by the body over time.
+This treatment can be used on most tattoo colors and skin types. The number of sessions required depends on factors such as tattoo size, ink color, depth, age of the tattoo, and individual skin response.</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
                         <span class="menu-sub-name">PMU Remover</span>
-                        <span class="menu-sub-desc">Non-laser saline removal method for correcting or fading permanent make up.</span>
+                        <span class="menu-sub-desc">PMU tattoo removal is a specialized laser treatment designed to safely lighten or remove unwanted permanent makeup, including eyebrow, lip, and eyeliner tattoos. The laser targets pigment particles within the skin, breaking them down so they can be naturally cleared by the body over time.
+
+Multiple sessions may be required depending on pigment type, depth, and desired results. Treatments are spaced several weeks apart to allow safe healing and gradual fading.
+
+Suitable for clients seeking correction, lightening for reshaping, or full removal of previous permanent makeup.
+
+( ONE TREATMENT MAY NOT BE ENOUGH, SEVERAL APPOINTMENTS MAY BE NEEDED)</span>
                     </a>
                 </li>
             </ul>
@@ -215,6 +226,87 @@
         <li class="menu-item">
             <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
                 <span class="menu-item-num">16</span>
+                <span class="menu-item-title">Makeup</span>
+                <span class="menu-item-arrow">&rarr;</span>
+            </a>
+            <p class="menu-item-desc">Enhance your natural beauty with a flawless, professionally applied makeup look tailored to your features, skin type, and occasion. Using high-quality products and expert techniques, this treatment delivers a radiant, long-lasting finish—perfect for events, photoshoots, or whenever you want to feel your best.</p>
+        </li>
+
+        <li class="menu-item">
+            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                <span class="menu-item-num">17</span>
+                <span class="menu-item-title">Laser</span>
+                <span class="menu-item-arrow">&rarr;</span>
+            </a>
+            <p class="menu-item-desc"></p>
+        </li>
+
+        <li class="menu-item">
+            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                <span class="menu-item-num">18</span>
+                <span class="menu-item-title">Mesotherapy</span>
+                <span class="menu-item-arrow">&rarr;</span>
+            </a>
+            <p class="menu-item-desc"></p>
+        </li>
+
+        <li class="menu-item">
+            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                <span class="menu-item-num">19</span>
+                <span class="menu-item-title">For Your Face</span>
+                <span class="menu-item-arrow">&rarr;</span>
+            </a>
+            <p class="menu-item-desc"></p>
+        </li>
+
+        <li class="menu-item">
+            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                <span class="menu-item-num">20</span>
+                <span class="menu-item-title">Tanning</span>
+                <span class="menu-item-arrow">&rarr;</span>
+            </a>
+            <p class="menu-item-desc"></p>
+        </li>
+
+        <li class="menu-item">
+            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                <span class="menu-item-num">21</span>
+                <span class="menu-item-title">For Your Smooth Skin</span>
+                <span class="menu-item-arrow">&rarr;</span>
+            </a>
+            <p class="menu-item-desc"></p>
+        </li>
+
+        <li class="menu-item">
+            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                <span class="menu-item-num">22</span>
+                <span class="menu-item-title">IPL Skin Rejuvenation</span>
+                <span class="menu-item-arrow">&rarr;</span>
+            </a>
+            <p class="menu-item-desc"></p>
+        </li>
+
+        <li class="menu-item">
+            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                <span class="menu-item-num">23</span>
+                <span class="menu-item-title">Deposit</span>
+                <span class="menu-item-arrow">&rarr;</span>
+            </a>
+            <p class="menu-item-desc"></p>
+        </li>
+
+        <li class="menu-item">
+            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                <span class="menu-item-num">24</span>
+                <span class="menu-item-title">Special Offers</span>
+                <span class="menu-item-arrow">&rarr;</span>
+            </a>
+            <p class="menu-item-desc"></p>
+        </li>
+
+        <li class="menu-item">
+            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                <span class="menu-item-num">25</span>
                 <span class="menu-item-title">Price List</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>

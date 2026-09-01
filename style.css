@@ -8,8 +8,9 @@ Version: 1.0
    DESIGN TOKENS
    ========================================================= */
 :root {
-  --bg:          #f5e1ff;
-  --bg-alt:      #EFE7F3;
+  --bg:          #EBC2FF;
+  --bg-alt:      #9368ab;
+  /* --bg-alt:      #E1D3E9; */
   --ink:         #2E2438;
   --ink-soft:    #5F5568;
   --rose:        #7B5B99;
@@ -47,6 +48,91 @@ Version: 1.0
      radial gradient needs a much higher alpha than in dark mode to read as
      a warm highlight instead of washing out — see dark-theme overrides. */
   --hero-glow-alpha: .22;
+
+  /* Silver chrome treatment — banded light/dark grays read as a brushed-metal
+     highlight when clipped to text; needs a mid-tone fallback for browsers
+     without background-clip:text support. Used as-is for stat numbers, and
+     (via --chrome-theme / --heading-fill below) for buttons/image borders/
+     headings in dark theme. */
+  --chrome-gradient: linear-gradient(
+    180deg,
+    #fdfdfd 0%,
+    #dadada 18%,
+    #8b8b8b 38%,
+    #f6f6f6 52%,
+    #6e6e6e 68%,
+    #e6e6e6 85%,
+    #ffffff 100%
+  );
+  --chrome-fallback: #aeaeae;
+
+  /* Gold chrome — same banded-highlight technique as --chrome-gradient,
+     warmed to gold tones for buttons/image borders in light theme. */
+  --chrome-gradient-gold: linear-gradient(
+    180deg,
+    #fcefd2 0%,
+    #e9c98a 18%,
+    #9a7038 38%,
+    #fbe8b8 52%,
+    #7c5a28 68%,
+    #e3be7c 85%,
+    #fcefd2 100%
+  );
+  --chrome-fallback-gold: #b9975b;
+
+  /* Lighter gold chrome — same bands, raised lightness — for heading text
+     specifically, where the darker bronze bands above read as too heavy. */
+  --chrome-gradient-gold-heading: linear-gradient(
+    180deg,
+    #fdf3e0 0%,
+    #f0d9a0 18%,
+    #c79a5c 38%,
+    #fdedc8 52%,
+    #a67c3e 68%,
+    #edd7a0 85%,
+    #fdf3e0 100%
+  );
+  --chrome-fallback-gold-heading: #c9a56a;
+
+  /* Chrome finish — theme-swappable alias so buttons and image borders can
+     be gold in light theme and silver in dark theme without duplicating
+     each rule. */
+  --chrome-theme: var(--chrome-gradient-gold);
+  --chrome-theme-fallback: var(--chrome-fallback-gold);
+
+  /* Heading fill — same idea as --chrome-theme, but headings get the
+     lighter gold variant in light theme (see --chrome-gradient-gold-heading
+     above); dark theme still shares the plain silver --chrome-gradient. */
+  --heading-fill: var(--chrome-gradient-gold-heading);
+  --heading-fill-fallback: var(--chrome-fallback-gold-heading);
+
+  /* Heading outline — the gold gradient's pale highlight bands nearly vanish
+     against the light pink page background, so a thin stroke keeps
+     letterforms readable regardless of where the gradient lands. Not needed
+     in dark theme (silver-on-dark-panel already has plenty of contrast), so
+     it's switched off there below. */
+  --heading-outline: #ffffff;
+
+  /* Backing plate for chrome headings sitting directly on the plain page
+     background (no hero photo/panel behind them to give contrast) — see
+     .why-best, .why-best-subheading, .testimonials-head below. */
+  --heading-panel-bg: rgba(74, 46, 99, .08);
+
+  /* Heading underline accent (.stroke-heading) — gold "beam" in light
+     theme, purple in dark theme below: tapered gold at the ends, bright
+     near-white core in the middle. */
+  --heading-accent-line: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--gold) 18%,
+    #fff6e4 50%,
+    var(--gold) 82%,
+    transparent 100%
+  );
+  --heading-accent-line-glow:
+    0 0 3px 1px rgba(255,246,228,.6),
+    0 0 8px 2px rgba(185,151,91,.4);
+  --heading-accent-line-width: 180px;
 }
 
 /* =========================================================
@@ -61,13 +147,32 @@ Version: 1.0
     --rose:        #C79FE8;
     --rose-deep:   #E3C9F5;
     --line:        #3A2E44;
-    --gold:        #D8B172;
-    --gold-soft:   #7A5D2E;
+    --gold:        #C9CDD3;
+    --gold-soft:   #4B4F56;
     --panel:       #2C2135;
     --surface:     #2C2135;
     --marble-veins: 255,255,255;
     --marble-blend: screen;
     --hero-glow-alpha: .10;
+    --chrome-theme: var(--chrome-gradient);
+    --chrome-theme-fallback: var(--chrome-fallback);
+    --heading-fill: var(--chrome-gradient);
+    --heading-fill-fallback: var(--chrome-fallback);
+    --heading-outline: transparent;
+    --heading-panel-bg: rgba(255, 255, 255, .05);
+    --heading-accent-line: linear-gradient(
+      90deg,
+      transparent 0%,
+      #B983FF 18%,
+      #ffffff 50%,
+      #B983FF 82%,
+      transparent 100%
+    );
+    --heading-accent-line-glow:
+      0 0 4px 1px rgba(185,131,255,.75),
+      0 0 10px 2px rgba(185,131,255,.5),
+      0 0 20px 5px rgba(185,131,255,.28);
+    --heading-accent-line-width: 180px;
   }
 }
 :root[data-theme="dark"] {
@@ -78,13 +183,32 @@ Version: 1.0
   --rose:        #C79FE8;
   --rose-deep:   #E3C9F5;
   --line:        #3A2E44;
-  --gold:        #D8B172;
-  --gold-soft:   #7A5D2E;
+  --gold:        #C9CDD3;
+  --gold-soft:   #4B4F56;
   --panel:       #2C2135;
   --surface:     #2C2135;
   --marble-veins: 255,255,255;
   --marble-blend: screen;
   --hero-glow-alpha: .10;
+  --chrome-theme: var(--chrome-gradient);
+  --chrome-theme-fallback: var(--chrome-fallback);
+  --heading-fill: var(--chrome-gradient);
+  --heading-fill-fallback: var(--chrome-fallback);
+  --heading-outline: transparent;
+  --heading-panel-bg: rgba(255, 255, 255, .05);
+  --heading-accent-line: linear-gradient(
+    90deg,
+    transparent 0%,
+    #B983FF 18%,
+    #ffffff 50%,
+    #B983FF 82%,
+    transparent 100%
+  );
+  --heading-accent-line-glow:
+    0 0 4px 1px rgba(185,131,255,.75),
+    0 0 10px 2px rgba(185,131,255,.5),
+    0 0 20px 5px rgba(185,131,255,.28);
+  --heading-accent-line-width: 180px;
 }
 
 /* =========================================================
@@ -108,6 +232,20 @@ h1, h2, h3 {
   letter-spacing: .015em;
   line-height: 1.1;
   margin: 0 0 .5em;
+  /* Chrome finish — gold in light theme, silver in dark theme (see
+     --heading-fill) — forced over the many section-specific heading
+     colors set further down the sheet (.hero h1, .about-hero h1, etc). */
+  color: var(--heading-fill-fallback) !important;
+  background: var(--heading-fill) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-text-stroke: .3px var(--heading-outline) !important;
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.4),
+    0 -1px 1px rgba(0,0,0,.1),
+    0 2px 6px rgba(0,0,0,.16),
+    0 1px 2px rgba(0,0,0,.2) !important;
 }
 .container {
   max-width: var(--max-width);
@@ -115,7 +253,7 @@ h1, h2, h3 {
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
 
-/* Signature underline — straight hairline + diamond, used under key headings */
+/* Signature underline — straight hairline, used under key headings */
 .stroke-heading { position: relative; display: inline-block; }
 .stroke-heading::after {
   content: "";
@@ -123,19 +261,10 @@ h1, h2, h3 {
   left: 50%;
   bottom: -0.6em;
   transform: translateX(-50%);
-  width: 72px;
+  width: var(--heading-accent-line-width);
   height: 1px;
-  background: var(--gold);
-}
-.stroke-heading::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: calc(-0.6em - 3px);
-  width: 7px;
-  height: 7px;
-  background: var(--gold);
-  transform: translateX(-50%) rotate(45deg);
+  background: var(--heading-accent-line);
+  box-shadow: var(--heading-accent-line-glow);
 }
 
 /* =========================================================
@@ -318,6 +447,7 @@ h1, h2, h3 {
   text-transform: uppercase;
   letter-spacing: .14em;
   border: 1px solid var(--gold);
+  border-image: var(--chrome-theme) 1;
   border-radius: var(--radius);
   box-shadow: 0 10px 24px -14px rgba(74, 46, 99, .6);
   transition: background .3s ease, box-shadow .3s ease, transform .2s ease;
@@ -358,6 +488,7 @@ h1, h2, h3 {
   position: absolute;
   inset: 0;
   border: 1px solid var(--gold);
+  border-image: var(--chrome-theme) 1;
   pointer-events: none;
 }
 .hero-photo img {
@@ -451,6 +582,7 @@ h1, h2, h3 {
   position: absolute;
   inset: 0;
   border: 1px solid var(--gold);
+  border-image: var(--chrome-theme) 1;
   pointer-events: none;
 }
 .about-split-photo img {
@@ -484,6 +616,13 @@ h1, h2, h3 {
   padding: 5.5rem 0;
   text-align: center;
 }
+/* Backing plate behind the chrome heading/subheading — this section has no
+   photo or panel behind the text to give the gradient fill contrast, so a
+   soft tinted plate stands in for one. */
+.why-best .stroke-heading {
+  padding: .3em 1em;
+  background: var(--heading-panel-bg);
+}
 .why-best-intro {
   max-width: 720px;
   margin: 0 auto 3rem;
@@ -491,8 +630,10 @@ h1, h2, h3 {
   line-height: 1.9;
 }
 .why-best-subheading {
+  display: inline-block;
+  padding: .3em 1em;
+  background: var(--heading-panel-bg);
   font-size: clamp(1.4rem, 2.4vw, 1.9rem);
-  color: var(--rose-deep);
   margin-bottom: 2.5rem;
 }
 .feature-list {
@@ -546,10 +687,18 @@ h1, h2, h3 {
   align-items: center;
   gap: .5rem;
 }
-.stat-number {
+.stat-number,
+.stat-number .stat-suffix {
   font-family: var(--font-display);
+  color: var(--chrome-fallback);
+  background: var(--chrome-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 1px 0 rgba(255,255,255,.35), 0 -1px 1px rgba(0,0,0,.2);
+}
+.stat-number {
   font-size: clamp(2.6rem, 5vw, 3.6rem);
-  color: var(--gold);
   line-height: 1;
 }
 .stat-suffix { font-size: .6em; }
@@ -604,6 +753,7 @@ h1, h2, h3 {
   position: absolute;
   inset: 0;
   border: 1px solid var(--gold);
+  border-image: var(--chrome-theme) 1;
   pointer-events: none;
 }
 .about-team-photo {
@@ -923,6 +1073,7 @@ a.menu-item-head:hover .menu-item-arrow { transform: translateX(4px); }
   position: absolute;
   inset: 0;
   border: 1px solid var(--gold);
+  border-image: var(--chrome-theme) 1;
   pointer-events: none;
 }
 .contact-map-frame iframe {
@@ -1063,6 +1214,11 @@ a.menu-item-head:hover .menu-item-arrow { transform: translateX(4px); }
    ========================================================= */
 .testimonials { padding: 5rem 0; }
 .testimonials-head { text-align: center; margin-bottom: 3rem; }
+/* Backing plate — same rationale as .why-best .stroke-heading above. */
+.testimonials-head .stroke-heading {
+  padding: .3em 1em;
+  background: var(--heading-panel-bg);
+}
 
 .testimonials-body {
   display: grid;
@@ -1123,7 +1279,12 @@ a.menu-item-head:hover .menu-item-arrow { transform: translateX(4px); }
   font-family: var(--font-display);
   font-size: 3.2rem;
   line-height: 1;
-  color: var(--gold);
+  color: var(--chrome-fallback);
+  background: var(--chrome-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 1px 0 rgba(255,255,255,.35), 0 -1px 1px rgba(0,0,0,.2);
   margin-bottom: .5rem;
 }
 .testimonial-card blockquote {
@@ -1358,16 +1519,16 @@ a.menu-item-head:hover .menu-item-arrow { transform: translateX(4px); }
   justify-content: center;
   width: 56px;
   height: 56px;
-  border: 1px solid var(--gold);
+  border: 1px solid transparent;
   border-radius: 50%;
-  background: var(--btn-gradient);
+  background: var(--btn-gradient) padding-box, var(--chrome-theme) border-box;
   color: var(--white);
   box-shadow: 0 12px 28px -10px rgba(74, 46, 99, .65);
   transition: background .3s ease, box-shadow .3s ease, transform .2s ease;
 }
 .phone-fab svg { width: 24px; height: 24px; }
 .phone-fab:hover {
-  background: var(--btn-gradient-hover);
+  background: var(--btn-gradient-hover) padding-box, var(--chrome-theme) border-box;
   box-shadow: 0 16px 34px -10px rgba(74, 46, 99, .8);
   transform: translateY(-2px);
 }
@@ -1450,9 +1611,7 @@ a.menu-item-head:hover .menu-item-arrow { transform: translateX(4px); }
 }
 
 .training-courses { padding: 5.5rem 0 1rem; }
-.training-courses .eyebrow,
-.training-prep .eyebrow,
-.training-results .eyebrow { justify-content: flex-start; }
+.section-head { text-align: center; }
 
 .course-meta {
   list-style: none;
@@ -1570,6 +1729,7 @@ a.menu-item-head:hover .menu-item-arrow { transform: translateX(4px); }
 .training-prep p { color: var(--ink-soft); line-height: 1.85; }
 
 .training-results { padding: 0 0 4.5rem; max-width: 780px; }
+.training-results .policy-list { margin-top: 1.5rem; }
 
 .training-cta {
   background: var(--panel);
@@ -1589,7 +1749,7 @@ a.menu-item-head:hover .menu-item-arrow { transform: translateX(4px); }
   max-width: 780px;
   text-align: center;
 }
-.training-cancellation .policy-list { align-items: center; }
+.training-cancellation .policy-list { align-items: center; margin-top: 1.5rem; }
 
 /* =========================================================
    TRAINING COURSE PAGE (individual course)
