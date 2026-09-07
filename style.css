@@ -1004,6 +1004,29 @@ a.menu-item-head:hover .menu-item-arrow { transform: translateX(4px); }
 }
 
 /* =========================================================
+   SINGLE TREATMENT PAGE
+   ========================================================= */
+.treatment-single-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+  gap: 3rem;
+  align-items: start;
+  padding: 4rem 0 6rem;
+}
+.treatment-single-body p {
+  color: var(--ink-soft);
+  line-height: 1.85;
+  margin: 0 0 1.25rem;
+  white-space: pre-line;
+}
+.treatment-single-price .pricing-card { text-align: left; }
+.treatment-single-price .btn { margin-top: 1.25rem; }
+
+@media (max-width: 760px) {
+  .treatment-single-content { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
    CONTACT US PAGE
    ========================================================= */
 .contact-section {

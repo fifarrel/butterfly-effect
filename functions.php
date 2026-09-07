@@ -24,6 +24,97 @@ function yourtheme_font_preconnect( $urls, $relation_type ) {
 add_filter( 'wp_resource_hints', 'yourtheme_font_preconnect', 10, 2 );
 
 /**
+ * Virtual treatment pages.
+ *
+ * Each of these URLs (e.g. /shr/) is served straight from a
+ * page-{slug}.php template in this theme, with NO WordPress Page needed
+ * in the database — routing lives entirely in this file so the whole
+ * treatments section can be managed from the theme folder alone.
+ */
+function butterfly_treatment_slugs() {
+    return array(
+        'korean-skincare',
+        'image-skincare',
+        'essencial-skincare',
+        'aesthetic-medicine',
+        'hair-treatments',
+        'hydrating-plumping',
+        'supportive-restorative-care',
+        'rejuvenation-anti-ageing',
+        'redness-relief',
+        'anti-acne',
+        'depigmentation',
+        'male-skincare',
+        'shr',
+        'waxing',
+        'laser-pmu-tattoo-removal',
+        'pmu-remover',
+        'ems-chair',
+        'eye-treatments',
+        'hands',
+        'feet',
+        'massage',
+        'body-scrub',
+        'makeup',
+        'laser',
+        'mesotherapy',
+        'for-your-face',
+        'tanning',
+        'for-your-smooth-skin',
+        'ipl-skin-rejuvenation',
+    );
+}
+
+function butterfly_treatment_add_rewrite_rules() {
+    foreach ( butterfly_treatment_slugs() as $slug ) {
+        add_rewrite_rule( '^' . $slug . '/?$', 'index.php?butterfly_treatment=' . $slug, 'top' );
+    }
+}
+add_action( 'init', 'butterfly_treatment_add_rewrite_rules' );
+
+function butterfly_treatment_query_vars( $vars ) {
+    $vars[] = 'butterfly_treatment';
+    return $vars;
+}
+add_filter( 'query_vars', 'butterfly_treatment_query_vars' );
+
+/**
+ * Rewrite rules registered above only take effect on the frontend once
+ * they've been flushed into WordPress's cached rewrite rules. Bump the
+ * version string here whenever butterfly_treatment_slugs() changes so
+ * this flushes again automatically on the next page load — no manual
+ * "visit Permalink settings" step required.
+ */
+function butterfly_treatment_maybe_flush_rewrite_rules() {
+    $version = '1';
+    if ( get_option( 'butterfly_treatment_rules_version' ) !== $version ) {
+        butterfly_treatment_add_rewrite_rules();
+        flush_rewrite_rules();
+        update_option( 'butterfly_treatment_rules_version', $version );
+    }
+}
+add_action( 'init', 'butterfly_treatment_maybe_flush_rewrite_rules', 20 );
+
+function butterfly_treatment_template( $template ) {
+    $slug = get_query_var( 'butterfly_treatment' );
+    if ( ! $slug || ! in_array( $slug, butterfly_treatment_slugs(), true ) ) {
+        return $template;
+    }
+
+    $file = get_theme_file_path( 'page-' . $slug . '.php' );
+    if ( ! file_exists( $file ) ) {
+        return $template;
+    }
+
+    global $wp_query;
+    $wp_query->is_404 = false;
+    status_header( 200 );
+
+    return $file;
+}
+add_filter( 'template_include', 'butterfly_treatment_template' );
+
+/**
  * SEO: per-page title & meta description map.
  * No SEO plugin is installed, so this is the single source of truth for
  * <title> and meta description across the site. Keyed by page slug;
@@ -96,13 +187,138 @@ function butterfly_seo_page_data() {
             'title'       => "Terms of Use | {$brand} Beauty Salon",
             'description' => "Terms of use for the Butterfly Effect website.",
         ),
+
+        // -------------------------------------------------------------
+        // Individual treatment pages (Treatments menu drill-down).
+        // XXX descriptions mark treatments with no source copy yet —
+        // fill in once real content is supplied.
+        // -------------------------------------------------------------
+        'korean-skincare' => array(
+            'title'       => "Korean Skincare | {$brand} Rathfarnham",
+            'description' => 'XXX',
+        ),
+        'image-skincare' => array(
+            'title'       => "Image Skincare | {$brand} Rathfarnham",
+            'description' => "Image Skincare facial at {$brand}, Rathfarnham \xe2\x80\x94 a clinical, results-driven treatment for a lifted, firmer, deep-cleansed glow.",
+        ),
+        'essencial-skincare' => array(
+            'title'       => "Essencial Skincare | {$brand} Rathfarnham",
+            'description' => 'XXX',
+        ),
+        'aesthetic-medicine' => array(
+            'title'       => "Aesthetic Medicine | {$brand} Rathfarnham",
+            'description' => 'XXX',
+        ),
+        'hair-treatments' => array(
+            'title'       => "Hair Treatments | {$brand} Rathfarnham",
+            'description' => 'XXX',
+        ),
+        'hydrating-plumping' => array(
+            'title'       => "Hydrating & Plumping | {$brand} Rathfarnham",
+            'description' => 'XXX',
+        ),
+        'supportive-restorative-care' => array(
+            'title'       => "Supportive & Restorative Care | {$brand} Rathfarnham",
+            'description' => "Specialised care for clients during \xe2\x80\x94 & after \xe2\x80\x94 cancer treatments, including oncology-safe skin treatments, permanent make up & areola reconstruction.",
+        ),
+        'rejuvenation-anti-ageing' => array(
+            'title'       => "Rejuvenation & Anti-Ageing | {$brand} Rathfarnham",
+            'description' => 'XXX',
+        ),
+        'redness-relief' => array(
+            'title'       => "Redness Relief | {$brand} Rathfarnham",
+            'description' => 'XXX',
+        ),
+        'anti-acne' => array(
+            'title'       => "Anti Acne Treatment | {$brand} Rathfarnham",
+            'description' => 'XXX',
+        ),
+        'depigmentation' => array(
+            'title'       => "Depigmentation Treatment | {$brand} Rathfarnham",
+            'description' => 'XXX',
+        ),
+        'male-skincare' => array(
+            'title'       => "Male Skincare | {$brand} Rathfarnham",
+            'description' => 'XXX',
+        ),
+        'shr' => array(
+            'title'       => "SHR \xe2\x80\x94 Super Hair Removal | {$brand} Rathfarnham",
+            'description' => "SHR (Super Hair Removal) at {$brand}, Rathfarnham \xe2\x80\x94 a fast, long-lasting alternative to traditional laser hair reduction, suitable for all skin tones.",
+        ),
+        'waxing' => array(
+            'title'       => "Waxing | {$brand} Rathfarnham",
+            'description' => "Facial, body & intimate waxing at {$brand}, Rathfarnham \xe2\x80\x94 smooth, long-lasting results. Book online today.",
+        ),
+        'laser-pmu-tattoo-removal' => array(
+            'title'       => "Laser PMU & Tattoo Removal | {$brand} Rathfarnham",
+            'description' => "Laser PMU & tattoo removal at {$brand}, Rathfarnham \xe2\x80\x94 a safe, effective treatment to fade or fully remove unwanted tattoos.",
+        ),
+        'pmu-remover' => array(
+            'title'       => "PMU Remover | {$brand} Rathfarnham",
+            'description' => "PMU Remover at {$brand}, Rathfarnham \xe2\x80\x94 a specialised laser treatment to safely lighten or remove unwanted permanent makeup.",
+        ),
+        'ems-chair' => array(
+            'title'       => "EMS Chair | {$brand} Rathfarnham",
+            'description' => "EMS Chair at {$brand}, Rathfarnham \xe2\x80\x94 electromagnetic muscle stimulation to tone & strengthen pelvic floor and core muscles.",
+        ),
+        'eye-treatments' => array(
+            'title'       => "Eye Treatments | {$brand} Rathfarnham",
+            'description' => "Eye Treatments at {$brand}, Rathfarnham \xe2\x80\x94 lash lift & tint, brow tint & shape, and eyelash extensions.",
+        ),
+        'hands' => array(
+            'title'       => "Manicures & Nails | {$brand} Rathfarnham",
+            'description' => "Manicures, gel & nail art at {$brand}, Rathfarnham. Book online today.",
+        ),
+        'feet' => array(
+            'title'       => "Pedicures & Foot Care | {$brand} Rathfarnham",
+            'description' => "Pedicures & foot care at {$brand}, Rathfarnham. Book online today.",
+        ),
+        'massage' => array(
+            'title'       => "Massage | {$brand} Rathfarnham",
+            'description' => "Swedish & holistic massage therapy at {$brand}, Rathfarnham \xe2\x80\x94 relax and restore. Book online today.",
+        ),
+        'body-scrub' => array(
+            'title'       => "Body Scrub | {$brand} Rathfarnham",
+            'description' => "Exfoliating body scrubs & masks at {$brand}, Rathfarnham for smoother, healthier skin.",
+        ),
+        'makeup' => array(
+            'title'       => "Makeup | {$brand} Rathfarnham",
+            'description' => "Professional makeup application at {$brand}, Rathfarnham \xe2\x80\x94 a flawless, long-lasting look tailored to your features & occasion.",
+        ),
+        'laser' => array(
+            'title'       => "Laser | {$brand} Rathfarnham",
+            'description' => 'XXX',
+        ),
+        'mesotherapy' => array(
+            'title'       => "Mesotherapy | {$brand} Rathfarnham",
+            'description' => 'XXX',
+        ),
+        'for-your-face' => array(
+            'title'       => "For Your Face | {$brand} Rathfarnham",
+            'description' => 'XXX',
+        ),
+        'tanning' => array(
+            'title'       => "Tanning | {$brand} Rathfarnham",
+            'description' => 'XXX',
+        ),
+        'for-your-smooth-skin' => array(
+            'title'       => "For Your Smooth Skin | {$brand} Rathfarnham",
+            'description' => 'XXX',
+        ),
+        'ipl-skin-rejuvenation' => array(
+            'title'       => "IPL Skin Rejuvenation | {$brand} Rathfarnham",
+            'description' => 'XXX',
+        ),
     );
 
     if ( is_front_page() ) {
         return $pages['front'];
     }
 
-    $slug = get_post_field( 'post_name', get_queried_object_id() );
+    $slug = get_query_var( 'butterfly_treatment' );
+    if ( ! $slug ) {
+        $slug = get_post_field( 'post_name', get_queried_object_id() );
+    }
     return isset( $pages[ $slug ] ) ? $pages[ $slug ] : null;
 }
 
@@ -126,8 +342,16 @@ function butterfly_seo_meta_tags() {
         return;
     }
 
-    $url = is_front_page() ? home_url( '/' ) : get_permalink();
+    $treatment_slug = get_query_var( 'butterfly_treatment' );
+    if ( is_front_page() ) {
+        $url = home_url( '/' );
+    } elseif ( $treatment_slug ) {
+        $url = home_url( '/' . $treatment_slug . '/' );
+    } else {
+        $url = get_permalink();
+    }
 
+    printf( '<link rel="canonical" href="%s">' . "\n", esc_url( $url ) );
     printf( '<meta name="description" content="%s">' . "\n", esc_attr( $data['description'] ) );
     printf( '<meta property="og:type" content="website">' . "\n" );
     printf( '<meta property="og:site_name" content="Butterfly Effect">' . "\n" );

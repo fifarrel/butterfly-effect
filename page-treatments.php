@@ -4,7 +4,7 @@
     <div class="container">
         <span class="eyebrow">Menu / Therapies</span>
         <h1 class="stroke-heading">Treatments</h1>
-        <p>Explore our full range of permanent makeup, skin &amp; beauty treatments at Butterfly Effect, Rathfarnham. Select a category below to view treatments &amp; book online.</p>
+        <p>Explore our full range of permanent makeup, skin &amp; beauty treatments at Butterfly Effect, Rathfarnham. Select a treatment below to learn more &amp; book online.</p>
     </div>
 </section>
 
@@ -19,82 +19,90 @@
             <p class="menu-item-desc">Targeted facial &amp; skin treatments for hydration, anti-ageing, acne, redness and pigmentation &mdash; using Korean, Image &amp; Essencial Skincare ranges plus advanced aesthetic medicine.</p>
             <ul class="menu-sub-list">
                 <li>
-                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                    <a href="<?php echo esc_url( home_url( '/rejuvenation-anti-ageing/' ) ); ?>">
                         <span class="menu-sub-name">Rejuvenation &amp; Anti-Ageing</span>
+                        <span class="menu-sub-desc">XXX</span>
                     </a>
                 </li>
                 <li>
-                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                    <a href="<?php echo esc_url( home_url( '/redness-relief/' ) ); ?>">
                         <span class="menu-sub-name">Redness Relief</span>
+                        <span class="menu-sub-desc">XXX</span>
                     </a>
                 </li>
                 <li>
-                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                    <a href="<?php echo esc_url( home_url( '/anti-acne/' ) ); ?>">
                         <span class="menu-sub-name">Anti Acne</span>
+                        <span class="menu-sub-desc">XXX</span>
                     </a>
                 </li>
                 <li>
-                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                    <a href="<?php echo esc_url( home_url( '/depigmentation/' ) ); ?>">
                         <span class="menu-sub-name">Depigmentation</span>
+                        <span class="menu-sub-desc">XXX</span>
                     </a>
                 </li>
                 <li>
-                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                    <a href="<?php echo esc_url( home_url( '/male-skincare/' ) ); ?>">
                         <span class="menu-sub-name">Male Skincare</span>
+                        <span class="menu-sub-desc">XXX</span>
                     </a>
                 </li>
             </ul>
         </li>
 
         <li class="menu-item">
-            <a class="menu-item-head" href="https://butterflyeffect.versum.com/?trade=852440" target="_blank" rel="noopener">
+            <a class="menu-item-head" href="<?php echo esc_url( home_url( '/korean-skincare/' ) ); ?>">
                 <span class="menu-item-num">02</span>
                 <span class="menu-item-title">Korean Skincare</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
+            <p class="menu-item-desc">XXX</p>
         </li>
 
         <li class="menu-item">
-            <a class="menu-item-head" href="https://butterflyeffect.versum.com/?trade=486069" target="_blank" rel="noopener">
+            <a class="menu-item-head" href="<?php echo esc_url( home_url( '/image-skincare/' ) ); ?>">
                 <span class="menu-item-num">03</span>
                 <span class="menu-item-title">Image Skincare</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
-                <span class="menu-sub-desc">A clinical results-driven facial designed to give beautifully lifted, firmer, deep cleansing, and glow. The treatment uses a blend of powerful antioxidant protection, nutrition and enzymes, and stem cells all sandwiched together to provide immediate measurable differences for the discerning client.</span>
-
+            <p class="menu-item-desc">A clinical results-driven facial for a beautifully lifted, firmer, deep-cleansed glow.</p>
         </li>
 
         <li class="menu-item">
-            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+            <a class="menu-item-head" href="<?php echo esc_url( home_url( '/essencial-skincare/' ) ); ?>">
                 <span class="menu-item-num">04</span>
                 <span class="menu-item-title">Essencial Skincare</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
+            <p class="menu-item-desc">XXX</p>
         </li>
 
         <li class="menu-item">
-            <a class="menu-item-head" href="https://butterflyeffect.versum.com/?trade=752454" target="_blank" rel="noopener">
+            <a class="menu-item-head" href="<?php echo esc_url( home_url( '/aesthetic-medicine/' ) ); ?>">
                 <span class="menu-item-num">05</span>
                 <span class="menu-item-title">Aesthetic Medicine</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
-            <p class="menu-item-desc"></p>
+            <p class="menu-item-desc">XXX</p>
         </li>
 
         <li class="menu-item">
-            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+            <a class="menu-item-head" href="<?php echo esc_url( home_url( '/hair-treatments/' ) ); ?>">
                 <span class="menu-item-num">06</span>
                 <span class="menu-item-title">Hair Treatments</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
+            <p class="menu-item-desc">XXX</p>
         </li>
 
         <li class="menu-item">
-            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+            <a class="menu-item-head" href="<?php echo esc_url( home_url( '/hydrating-plumping/' ) ); ?>">
                 <span class="menu-item-num">07</span>
                 <span class="menu-item-title">Hydrating &amp; Plumping</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
+            <p class="menu-item-desc">XXX</p>
         </li>
 
         <li class="menu-item">
@@ -103,14 +111,15 @@
                 <span class="menu-item-title">Permanent Make Up</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
-            <p class="menu-item-desc">Semi-permanent cosmetic tattooing including natural eyeliner, soft eyebrow shading &amp; microblading, and areola reconstruction for clients post-mastectomy &mdash; long-lasting definition tailored to your features.</p>
+            <p class="menu-item-desc">Semi-permanent cosmetic tattooing including natural eyeliner, soft eyebrow shading &amp; microblading, and areola reconstruction for clients post-mastectomy.</p>
         </li>
 
         <li class="menu-item">
-            <div class="menu-item-head">
+            <a class="menu-item-head" href="<?php echo esc_url( home_url( '/supportive-restorative-care/' ) ); ?>">
                 <span class="menu-item-num">09</span>
                 <span class="menu-item-title">Supportive &amp; Restorative Care</span>
-            </div>
+                <span class="menu-item-arrow">&rarr;</span>
+            </a>
             <p class="menu-item-desc">Specialised care for clients during &amp; after cancer treatments, including oncology-safe skin treatments, permanent make up and areola reconstruction.</p>
         </li>
 
@@ -121,13 +130,13 @@
             </div>
             <ul class="menu-sub-list">
                 <li>
-                    <a href="https://butterflyeffect.versum.com/?trade=722912" target="_blank" rel="noopener">
+                    <a href="<?php echo esc_url( home_url( '/shr/' ) ); ?>">
                         <span class="menu-sub-name">SHR</span>
-                        <span class="menu-sub-desc">Super Hair Removal &mdash; a fast, long-lasting alternative to traditional laser hair reduction, suitable for all skin tones.</span>
+                        <span class="menu-sub-desc">Super Hair Removal &mdash; a fast, long-lasting alternative to traditional laser hair reduction.</span>
                     </a>
                 </li>
                 <li>
-                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                    <a href="<?php echo esc_url( home_url( '/waxing/' ) ); ?>">
                         <span class="menu-sub-name">Waxing</span>
                         <span class="menu-sub-desc">Facial, body &amp; intimate waxing for smooth, long-lasting results.</span>
                     </a>
@@ -142,43 +151,36 @@
             </div>
             <ul class="menu-sub-list">
                 <li>
-                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                    <a href="<?php echo esc_url( home_url( '/laser-pmu-tattoo-removal/' ) ); ?>">
                         <span class="menu-sub-name">Laser PMU &amp; Tattoo Removal</span>
-                        <span class="menu-sub-desc">Laser tattoo removal is a safe and effective treatment designed to fade or fully remove unwanted tattoos. Advanced laser technology delivers targeted energy into the skin, breaking down tattoo ink particles into smaller fragments that are naturally eliminated by the body over time.
-This treatment can be used on most tattoo colors and skin types. The number of sessions required depends on factors such as tattoo size, ink color, depth, age of the tattoo, and individual skin response.</span>
+                        <span class="menu-sub-desc">A safe, effective laser treatment to fade or fully remove unwanted tattoos.</span>
                     </a>
                 </li>
                 <li>
-                    <a href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+                    <a href="<?php echo esc_url( home_url( '/pmu-remover/' ) ); ?>">
                         <span class="menu-sub-name">PMU Remover</span>
-                        <span class="menu-sub-desc">PMU tattoo removal is a specialized laser treatment designed to safely lighten or remove unwanted permanent makeup, including eyebrow, lip, and eyeliner tattoos. The laser targets pigment particles within the skin, breaking them down so they can be naturally cleared by the body over time.
-
-Multiple sessions may be required depending on pigment type, depth, and desired results. Treatments are spaced several weeks apart to allow safe healing and gradual fading.
-
-Suitable for clients seeking correction, lightening for reshaping, or full removal of previous permanent makeup.
-
-( ONE TREATMENT MAY NOT BE ENOUGH, SEVERAL APPOINTMENTS MAY BE NEEDED)</span>
+                        <span class="menu-sub-desc">A specialised laser treatment to safely lighten or remove unwanted PMU.</span>
                     </a>
                 </li>
             </ul>
         </li>
 
         <li class="menu-item">
-            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+            <a class="menu-item-head" href="<?php echo esc_url( home_url( '/ems-chair/' ) ); ?>">
                 <span class="menu-item-num">12</span>
                 <span class="menu-item-title">EMS Chair</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
-            <p class="menu-item-desc">Electromagnetic muscle stimulation to tone &amp; strengthen pelvic floor and core muscles &mdash; a comfortable, non-invasive seated treatment.</p>
+            <p class="menu-item-desc">Electromagnetic muscle stimulation to tone &amp; strengthen pelvic floor and core muscles.</p>
         </li>
 
         <li class="menu-item">
-            <a class="menu-item-head" href="https://butterflyeffect.versum.com/?trade=255044" target="_blank" rel="noopener">
+            <a class="menu-item-head" href="<?php echo esc_url( home_url( '/eye-treatments/' ) ); ?>">
                 <span class="menu-item-num">13</span>
                 <span class="menu-item-title">Eye Treatments</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
-            <p class="menu-item-desc">Lash lift &amp; tint, brow tint &amp; shape, and eyelash extensions to define and enhance your natural eyes.</p>
+            <p class="menu-item-desc">Lash lift &amp; tint, brow tint &amp; shape, and eyelash extensions to define your eyes.</p>
         </li>
 
         <li class="menu-item">
@@ -188,13 +190,13 @@ Suitable for clients seeking correction, lightening for reshaping, or full remov
             </div>
             <ul class="menu-sub-list">
                 <li>
-                    <a href="https://butterflyeffect.versum.com/?trade=255042" target="_blank" rel="noopener">
+                    <a href="<?php echo esc_url( home_url( '/hands/' ) ); ?>">
                         <span class="menu-sub-name">Hands</span>
                         <span class="menu-sub-desc">Manicures, gel &amp; nail art.</span>
                     </a>
                 </li>
                 <li>
-                    <a href="https://butterflyeffect.versum.com/?trade=255043" target="_blank" rel="noopener">
+                    <a href="<?php echo esc_url( home_url( '/feet/' ) ); ?>">
                         <span class="menu-sub-name">Feet</span>
                         <span class="menu-sub-desc">Pedicures &amp; foot care.</span>
                     </a>
@@ -209,13 +211,13 @@ Suitable for clients seeking correction, lightening for reshaping, or full remov
             </div>
             <ul class="menu-sub-list">
                 <li>
-                    <a href="https://butterflyeffect.versum.com/?trade=255050" target="_blank" rel="noopener">
+                    <a href="<?php echo esc_url( home_url( '/massage/' ) ); ?>">
                         <span class="menu-sub-name">Massage</span>
                         <span class="menu-sub-desc">Swedish &amp; holistic massage therapy to relax and restore.</span>
                     </a>
                 </li>
                 <li>
-                    <a href="https://butterflyeffect.versum.com/?trade=255049" target="_blank" rel="noopener">
+                    <a href="<?php echo esc_url( home_url( '/body-scrub/' ) ); ?>">
                         <span class="menu-sub-name">Body Scrub</span>
                         <span class="menu-sub-desc">Exfoliating body scrubs &amp; masks for smoother, healthier skin.</span>
                     </a>
@@ -224,66 +226,66 @@ Suitable for clients seeking correction, lightening for reshaping, or full remov
         </li>
 
         <li class="menu-item">
-            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+            <a class="menu-item-head" href="<?php echo esc_url( home_url( '/makeup/' ) ); ?>">
                 <span class="menu-item-num">16</span>
                 <span class="menu-item-title">Makeup</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
-            <p class="menu-item-desc">Enhance your natural beauty with a flawless, professionally applied makeup look tailored to your features, skin type, and occasion. Using high-quality products and expert techniques, this treatment delivers a radiant, long-lasting finish—perfect for events, photoshoots, or whenever you want to feel your best.</p>
+            <p class="menu-item-desc">A flawless, professionally applied makeup look tailored to your features &amp; occasion.</p>
         </li>
 
         <li class="menu-item">
-            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+            <a class="menu-item-head" href="<?php echo esc_url( home_url( '/laser/' ) ); ?>">
                 <span class="menu-item-num">17</span>
                 <span class="menu-item-title">Laser</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
-            <p class="menu-item-desc"></p>
+            <p class="menu-item-desc">XXX</p>
         </li>
 
         <li class="menu-item">
-            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+            <a class="menu-item-head" href="<?php echo esc_url( home_url( '/mesotherapy/' ) ); ?>">
                 <span class="menu-item-num">18</span>
                 <span class="menu-item-title">Mesotherapy</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
-            <p class="menu-item-desc"></p>
+            <p class="menu-item-desc">XXX</p>
         </li>
 
         <li class="menu-item">
-            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+            <a class="menu-item-head" href="<?php echo esc_url( home_url( '/for-your-face/' ) ); ?>">
                 <span class="menu-item-num">19</span>
                 <span class="menu-item-title">For Your Face</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
-            <p class="menu-item-desc"></p>
+            <p class="menu-item-desc">XXX</p>
         </li>
 
         <li class="menu-item">
-            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+            <a class="menu-item-head" href="<?php echo esc_url( home_url( '/tanning/' ) ); ?>">
                 <span class="menu-item-num">20</span>
                 <span class="menu-item-title">Tanning</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
-            <p class="menu-item-desc"></p>
+            <p class="menu-item-desc">XXX</p>
         </li>
 
         <li class="menu-item">
-            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+            <a class="menu-item-head" href="<?php echo esc_url( home_url( '/for-your-smooth-skin/' ) ); ?>">
                 <span class="menu-item-num">21</span>
                 <span class="menu-item-title">For Your Smooth Skin</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
-            <p class="menu-item-desc"></p>
+            <p class="menu-item-desc">XXX</p>
         </li>
 
         <li class="menu-item">
-            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
+            <a class="menu-item-head" href="<?php echo esc_url( home_url( '/ipl-skin-rejuvenation/' ) ); ?>">
                 <span class="menu-item-num">22</span>
                 <span class="menu-item-title">IPL Skin Rejuvenation</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
-            <p class="menu-item-desc"></p>
+            <p class="menu-item-desc">XXX</p>
         </li>
 
         <li class="menu-item">
@@ -292,7 +294,6 @@ Suitable for clients seeking correction, lightening for reshaping, or full remov
                 <span class="menu-item-title">Deposit</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
-            <p class="menu-item-desc"></p>
         </li>
 
         <li class="menu-item">
@@ -301,7 +302,6 @@ Suitable for clients seeking correction, lightening for reshaping, or full remov
                 <span class="menu-item-title">Special Offers</span>
                 <span class="menu-item-arrow">&rarr;</span>
             </a>
-            <p class="menu-item-desc"></p>
         </li>
 
         <li class="menu-item">
