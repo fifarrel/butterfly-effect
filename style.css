@@ -80,38 +80,25 @@ Version: 1.0
   );
   --chrome-fallback-gold: #b9975b;
 
-  /* Lighter gold chrome — same bands, raised lightness — for heading text
-     specifically, where the darker bronze bands above read as too heavy. */
-  --chrome-gradient-gold-heading: linear-gradient(
-    180deg,
-    #fdf3e0 0%,
-    #f0d9a0 18%,
-    #c79a5c 38%,
-    #fdedc8 52%,
-    #a67c3e 68%,
-    #edd7a0 85%,
-    #fdf3e0 100%
-  );
-  --chrome-fallback-gold-heading: #c9a56a;
-
   /* Chrome finish — theme-swappable alias so buttons and image borders can
      be gold in light theme and silver in dark theme without duplicating
      each rule. */
   --chrome-theme: var(--chrome-gradient-gold);
   --chrome-theme-fallback: var(--chrome-fallback-gold);
 
-  /* Heading fill — same idea as --chrome-theme, but headings get the
-     lighter gold variant in light theme (see --chrome-gradient-gold-heading
-     above); dark theme still shares the plain silver --chrome-gradient. */
-  --heading-fill: var(--chrome-gradient-gold-heading);
-  --heading-fill-fallback: var(--chrome-fallback-gold-heading);
+  /* Heading fill — flat solid gold in light theme (no banded chrome
+     highlight); dark theme still gets the silver chrome gradient below. */
+  --heading-fill: var(--gold);
+  --heading-fill-fallback: var(--gold);
 
-  /* Heading outline — the gold gradient's pale highlight bands nearly vanish
-     against the light pink page background, so a thin stroke keeps
-     letterforms readable regardless of where the gradient lands. Not needed
-     in dark theme (silver-on-dark-panel already has plenty of contrast), so
-     it's switched off there below. */
-  --heading-outline: #ffffff;
+  /* Heading outline — only needed to keep letterforms readable when the
+     fill is a gradient with pale bands; not needed for a flat fill. */
+  --heading-outline: transparent;
+
+  /* Heading text-shadow — the light/dark emboss layers that gave chrome
+     headings a shiny highlight; off for the flat gold fill in light theme,
+     restored for the chrome gradient in dark theme below. */
+  --heading-text-shadow: none;
 
   /* Backing plate for chrome headings sitting directly on the plain page
      background (no hero photo/panel behind them to give contrast) — see
@@ -159,6 +146,11 @@ Version: 1.0
     --heading-fill: var(--chrome-gradient);
     --heading-fill-fallback: var(--chrome-fallback);
     --heading-outline: transparent;
+    --heading-text-shadow:
+      0 1px 0 rgba(255,255,255,.4),
+      0 -1px 1px rgba(0,0,0,.1),
+      0 2px 6px rgba(0,0,0,.16),
+      0 1px 2px rgba(0,0,0,.2);
     --heading-panel-bg: rgba(255, 255, 255, .05);
     --heading-accent-line: linear-gradient(
       90deg,
@@ -241,11 +233,7 @@ h1, h2, h3 {
   background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   -webkit-text-stroke: .3px var(--heading-outline) !important;
-  text-shadow:
-    0 1px 0 rgba(255,255,255,.4),
-    0 -1px 1px rgba(0,0,0,.1),
-    0 2px 6px rgba(0,0,0,.16),
-    0 1px 2px rgba(0,0,0,.2) !important;
+  text-shadow: var(--heading-text-shadow) !important;
 }
 .container {
   max-width: var(--max-width);
@@ -509,13 +497,16 @@ h1, h2, h3 {
    TREATMENT / CATEGORY STRIP
    ========================================================= */
 .category-strip {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--gap);
   padding: 4rem 0;
 }
 .category-btn {
   position: relative;
+  flex: 1 1 220px;
+  max-width: 280px;
   aspect-ratio: 4 / 3;
   display: flex;
   align-items: center;
@@ -808,12 +799,19 @@ h1, h2, h3 {
 .team-grid .eyebrow { margin-bottom: .75rem; }
 .team-grid h2 { margin-bottom: 3.5rem; color: var(--rose-deep); }
 .team-grid-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: calc(var(--gap) + .5rem);
   text-align: center;
 }
-.team-member { display: flex; flex-direction: column; align-items: center; }
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 240px;
+  max-width: 340px;
+}
 .team-photo-frame {
   position: relative;
   width: 100%;
@@ -1601,8 +1599,9 @@ a.menu-item-head:hover .menu-item-arrow { transform: translateX(4px); }
   text-align: center;
 }
 .training-testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--gap);
   margin-top: 3rem;
   text-align: left;
@@ -1613,6 +1612,8 @@ a.menu-item-head:hover .menu-item-arrow { transform: translateX(4px); }
   border-radius: var(--radius);
   padding: 2.25rem 2rem;
   margin: 0;
+  flex: 1 1 300px;
+  max-width: 420px;
 }
 .training-testimonial p {
   font-family: var(--font-display);
@@ -1667,17 +1668,20 @@ a.menu-item-head:hover .menu-item-arrow { transform: translateX(4px); }
 }
 
 .pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
 }
-.pricing-grid-single { grid-template-columns: minmax(260px, 420px); }
 .pricing-card {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 1.75rem 1.75rem 2rem;
+  flex: 1 1 260px;
+  max-width: 380px;
 }
+.pricing-grid-single .pricing-card { max-width: 420px; }
 .pricing-card h4,
 .pricing-card h5 {
   font-family: var(--font-display);
@@ -1826,14 +1830,17 @@ a.menu-item-head:hover .menu-item-arrow { transform: translateX(4px); }
    TRAINING OVERVIEW — COURSE PREVIEW CARDS
    ========================================================= */
 .course-preview-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--gap);
   margin-top: 3rem;
 }
 .course-preview-card {
   display: flex;
   flex-direction: column;
+  flex: 1 1 300px;
+  max-width: 380px;
   background: var(--surface);
   border: 1px solid var(--line);
   padding: 2.25rem 2rem;

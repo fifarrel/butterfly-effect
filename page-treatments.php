@@ -287,30 +287,6 @@
             </a>
             <p class="menu-item-desc">XXX</p>
         </li>
-
-        <li class="menu-item">
-            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
-                <span class="menu-item-num">23</span>
-                <span class="menu-item-title">Deposit</span>
-                <span class="menu-item-arrow">&rarr;</span>
-            </a>
-        </li>
-
-        <li class="menu-item">
-            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
-                <span class="menu-item-num">24</span>
-                <span class="menu-item-title">Special Offers</span>
-                <span class="menu-item-arrow">&rarr;</span>
-            </a>
-        </li>
-
-        <li class="menu-item">
-            <a class="menu-item-head" href="https://butterflyeffect.versum.com/" target="_blank" rel="noopener">
-                <span class="menu-item-num">25</span>
-                <span class="menu-item-title">Price List</span>
-                <span class="menu-item-arrow">&rarr;</span>
-            </a>
-        </li>
     </ol>
 </section>
 

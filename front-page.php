@@ -8,7 +8,7 @@
             <a href="https://butterflyeffect.versum.com/" class="btn" target="_blank" rel="noopener">Book Now</a>
         </div>
         <div class="hero-photo">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/inside.webp" alt="Inside the Butterfly Effect beauty salon">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/reception.webp" alt="Reception at the Butterfly Effect beauty salon">
         </div>
     </div>
 </section>
@@ -42,6 +42,18 @@
         <img src="<?php echo get_template_directory_uri(); ?>/assets/be-logo.png" alt="" class="category-btn-logo">
         <span class="category-btn-content">
             <span class="category-btn-label">Smart Skin Survey</span>
+        </span>
+    </a>
+    <a href="<?php echo esc_url( home_url( '/contact-us/' ) ); ?>" class="category-btn">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/be-logo.png" alt="" class="category-btn-logo">
+        <span class="category-btn-content">
+            <span class="category-btn-label">Contact Us</span>
+        </span>
+    </a>
+    <a href="https://shop.bepermanentmakeup.ie/" class="category-btn" target="_blank" rel="noopener">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/be-logo.png" alt="" class="category-btn-logo">
+        <span class="category-btn-content">
+            <span class="category-btn-label">Shop</span>
         </span>
     </a>
 </section>
@@ -81,15 +93,15 @@
 <section class="stats-band">
     <div class="container stats-grid">
         <div class="stat-item">
-            <span class="stat-number">5000</span>
+            <span class="stat-number">7500+</span>
             <span class="stat-label">Happy Customers</span>
         </div>
         <div class="stat-item">
-            <span class="stat-number">100<span class="stat-suffix">%</span></span>
+            <span class="stat-number">99%<span class="stat-suffix">%</span></span>
             <span class="stat-label">Satisfaction</span>
         </div>
         <div class="stat-item">
-            <span class="stat-number">2500</span>
+            <span class="stat-number">5000+</span>
             <span class="stat-label">Permanent MakeUp Treatments</span>
         </div>
     </div>

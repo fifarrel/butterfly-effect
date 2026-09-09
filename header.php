@@ -78,6 +78,8 @@
                     <li><a href="<?php echo esc_url( home_url( '/treatments/' ) ); ?>">Treatments</a></li>
                     <li><a href="<?php echo esc_url( home_url( '/training/' ) ); ?>">Training</a></li>
                     <li><a href="<?php echo esc_url( home_url( '/smart-skin-survey/' ) ); ?>">Smart Skin Survey</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/contact-us/' ) ); ?>">Contact Us</a></li>
+                    <li><a href="https://shop.bepermanentmakeup.ie/" target="_blank" rel="noopener">Shop</a></li>
                 </ul>
             </nav>
             <a href="https://butterflyeffect.versum.com/" class="btn header-cta" target="_blank" rel="noopener">Book Now</a>

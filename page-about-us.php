@@ -35,25 +35,11 @@
         </div>
         <div class="team-member">
             <div class="team-photo-frame">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/new%20assets/aneta_headshot.PNG" alt="Aneta, Beauty Therapist at Butterfly Effect Beauty Salon Rathfarnham">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/new%20assets/rachel_headshot.PNG" alt="Rachel, Beauty Therapist & Front of House at Butterfly Effect Beauty Salon Rathfarnham">
             </div>
-            <h3>Aneta</h3>
-            <h4 class="team-role">Beauty therapist</h4>
-            <p>Aneta is a fully qualified beauty therapist with 11 years of experience. Her specialties include facials, waxing and pedicures. Aneta is excited to continuously learn about new techniques and treatments and enjoys trying new products. Her main goal is to resolve any beauty issues a client may be dealing with, but she also hopes her clients leave in a lighter mood – more relaxed and comfortable. She aims to make the salon a special place where clients can forget about the cares of the world for a while.</p>
-        </div>
-        <div class="team-member">
-            <div class="team-photo-frame">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/new%20assets/hannah_headshot.PNG" alt="Hannah, Beauty Therapist at Butterfly Effect Beauty Salon Rathfarnham">
-            </div>
-            <h3>Hannah</h3>
-            <h4 class="team-role">Beauty therapist</h4>
-            <p>Hannah has over 20 years of experience in the beauty industry. She began her training as a Beauty Therapist in Poland and later enhanced her knowledge at the Holistic College in Dublin.
-
-Her passion for the beauty industry stems from her creative nature and her commitment to helping clients feel confident and beautiful both inside and out.
-
-Hannah’s enthusiastic and vibrant personality is truly contagious, making her a joy to be around.
-
-She specializes in advanced skincare, eyebrow shaping, waxing, pedicures, manicures, Swedish massage, and holistic massage therapy.</p>
+            <h3>Rachel</h3>
+            <h4 class="team-role">Beauty therapist & Front of house</h4>
+            <p>Rachel is a Cidesco qualified beauty therapist. With a passion for brows, makeup application & Skin treatments. She does a range of treatments such as lvl lash lift, spray tanning, body scrubs / masks & waxing. She graduated top of her class in beauty school and is always eager to learn new treatments to offer clients. Rachel takes each client as a priority and makes sure they leave the salon feeling confident and fabulous.</p>
         </div>
         <div class="team-member">
             <div class="team-photo-frame">
@@ -65,11 +51,19 @@ She specializes in advanced skincare, eyebrow shaping, waxing, pedicures, manicu
         </div>
         <div class="team-member">
             <div class="team-photo-frame">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/new%20assets/rachel_headshot.PNG" alt="Rachel, Beauty Therapist & Front of House at Butterfly Effect Beauty Salon Rathfarnham">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/new%20assets/hannah_headshot.PNG" alt="Hannah, Beauty Therapist at Butterfly Effect Beauty Salon Rathfarnham">
             </div>
-            <h3>Rachel</h3>
-            <h4 class="team-role">Beauty therapist & Front of house</h4>
-            <p>Rachel is a Cidesco qualified beauty therapist. With a passion for brows, makeup application & Skin treatments. She does a range of treatments such as lvl lash lift, spray tanning, body scrubs / masks & waxing. She graduated top of her class in beauty school and is always eager to learn new treatments to offer clients. Rachel takes each client as a priority and makes sure they leave the salon feeling confident and fabulous.   </p>
+            <h3>Hannah</h3>
+            <h4 class="team-role">Beauty therapist</h4>
+            <p>Hannah has over 20 years of experience in the beauty industry. She began her training as a Beauty Therapist in Poland and later enhanced her knowledge at the Holistic College in Dublin. Her passion for the beauty industry stems from her creative nature and her commitment to helping clients feel confident and beautiful both inside and out. Hannah’s enthusiastic and vibrant personality is truly contagious, making her a joy to be around. She specializes in advanced skincare, eyebrow shaping, waxing, pedicures, manicures, Swedish massage, and holistic massage therapy.</p>
+        </div>
+        <div class="team-member">
+            <div class="team-photo-frame">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/new%20assets/aneta_headshot.PNG" alt="Aneta, Beauty Therapist at Butterfly Effect Beauty Salon Rathfarnham">
+            </div>
+            <h3>Aneta</h3>
+            <h4 class="team-role">Beauty therapist</h4>
+            <p>Aneta is a fully qualified beauty therapist with 11 years of experience. Her specialties include facials, waxing and pedicures. Aneta is excited to continuously learn about new techniques and treatments and enjoys trying new products. Her main goal is to resolve any beauty issues a client may be dealing with, but she also hopes her clients leave in a lighter mood – more relaxed and comfortable. She aims to make the salon a special place where clients can forget about the cares of the world for a while.</p>
         </div>
     </div>
 </section>
