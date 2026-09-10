@@ -4,19 +4,18 @@
     <div class="container">
         <span class="eyebrow">BE Academy Dublin</span>
         <h1 class="stroke-heading">Become a Permanent Make Up Artist</h1>
-        <p>The eyes are the window of the soul and the brows are their frame &mdash; that&rsquo;s why more and more people are opting for subtle, beautiful permanent make-up for both the eyes and brows. And the fastest, most natural route to more defined lips with a full effect is permanent lip colour. Whether your client has thin brows, alopecia, over-plucking, or has been unwell and needs your repigmentation help, our training prepares you for every eventuality. You will become a master of the art form.</p>
+        <p>The eyes are the window of the soul, and the brows their frame — which is why more people are choosing subtle, beautiful permanent make-up for eyes, brows, and lips. Whether your client has thin brows, alopecia, over-plucking, or needs repigmentation after illness, our training prepares you for it all. You'll master the art form.</p>
     </div>
 </section>
 
 <section class="training-intro container">
     <div class="training-intro-block">
         <h2>How to Become a Professional Permanent Makeup Technician</h2>
-        <p>How do you become a professional, well-respected permanent makeup artist &ndash; adding another lucrative string to your beauty bow? It&rsquo;s a true artistic discipline with strict and stringent safety procedures, and that&rsquo;s why BE Permanent Makeup &amp; Advanced Beauty Academy trains every student in either MICROBLADING or PMU professional permanent makeup. MICROBLADING is a method that uses pen strokes by hand for the eyebrow area, perfectly simulating the natural hairlines of the brow. PMU uses a special machine to create immaculate lip and eye liners. When you experience both methods you&rsquo;ll become incredibly enthusiastic about the skills and techniques you can learn to provide a highly advanced level of treatment that you and your clients will be extremely impressed with.</p>
+        <p>How do you become a professional, well-respected permanent makeup artist — adding another lucrative string to your beauty bow? It's a true artistic discipline with strict safety procedures, which is why BE Permanent Makeup & Advanced Beauty Academy trains every student in both MICROBLADING and PMU. Microblading uses hand-drawn strokes to simulate natural brow hairlines, while PMU uses a machine for precise lip and eye liners. Master both, and you'll deliver an advanced level of treatment that will impress you and your clients alike.</p>
     </div>
     <div class="training-intro-block">
         <h2>The Essence of Permanent Make-Up Courses &amp; Training</h2>
-        <p>Permanent make-up methods should be applied in harmony with the natural facial features, that&rsquo;s why we carefully match the colour, shade and intensity of the ink / pigment. Shortly after the procedure, the pigment in the skin is darker, and after a few days it fades by about 40&ndash;50%. We train you how to apply permanent make-up using our patented methods and equipment, ensuring the treatment is comfortable and gives you and your clients maximum satisfaction with the greatest possible effects.</p>
-        <p>At BE Permanent Makeup &amp; Advanced Beauty Academy we use a professional permanent make-up procedure performed with HANAMI PIGMENTS methods.</p>
+        <p>Permanent make-up should work in harmony with natural facial features, which is why we carefully match ink colour, shade, and intensity. The pigment appears darker right after the procedure, fading by about 40–50% within days. We train you in our patented methods and equipment, ensuring comfortable treatments with maximum satisfaction for you and your clients. At BE Permanent Makeup & Advanced Beauty Academy, we use professional procedures with HANAMI PIGMENTS</p>
     </div>
 </section>
 

@@ -8,23 +8,22 @@ Version: 1.0
    DESIGN TOKENS
    ========================================================= */
 :root {
-  --bg:          #EBC2FF;
-  --bg-alt:      #9368ab;
-  /* --bg-alt:      #E1D3E9; */
-  --ink:         #2E2438;
-  --ink-soft:    #5F5568;
-  --rose:        #7B5B99;
-  --rose-deep:   #4A2E63;
-  --line:        #DED0E6;
+  --bg:          #1B1420;
+  --bg-alt:      #23192B;
+  --ink:         #F1E8F6;
+  --ink-soft:    #B8A7C5;
+  --rose:        #C79FE8;
+  --rose-deep:   #E3C9F5;
+  --line:        #3A2E44;
   --white:       #FFFFFF;
-  --gold:        #B9975B;
-  --gold-soft:   #E8DCC4;
+  --gold:        #C9CDD3;
+  --gold-soft:   #4B4F56;
 
   /* Dark accent panels (hero, footer, stats band) & elevated card surfaces —
      kept as separate tokens from --ink / --white so they can invert
-     independently of body text/background in the dark theme below. */
-  --panel:       #2E2438;
-  --surface:     #FFFFFF;
+     independently of body text/background in the light theme below. */
+  --panel:       #2C2135;
+  --surface:     #2C2135;
 
   --font-display: 'Jost', 'Cormorant', 'Cormorant Garamond', Georgia, serif;
   --font-body:    'Inter', -apple-system, sans-serif;
@@ -38,22 +37,28 @@ Version: 1.0
   --btn-gradient:       linear-gradient(135deg, #7B5B99 0%, #4A2E63 100%);
   --btn-gradient-hover: linear-gradient(135deg, #4A2E63 0%, #33203F 100%);
 
-  /* Header marble veining is multiplied (dark veins) on the light header
-     background, then swaps to screened white veins in dark mode — see
-     dark-theme overrides below and .site-header::before. */
-  --marble-veins: 74,46,99;
-  --marble-blend: multiply;
+  /* Client-requested header/footer treatment: a fixed purple-to-deep-dark-
+     purple ombre, left to right, replacing the old faux marble veining.
+     Built from the brand's own purples (--rose / --rose-deep, the same
+     values behind --btn-gradient and the hero panel, deepening into the
+     dark theme's near-black --bg) rather than a new hue, so it reads as
+     part of the existing palette. Fixed (not theme-swappable) so the
+     header/footer keep one consistent brand look regardless of light/dark
+     theme — see the fixed light text colors added throughout the header
+     rules to keep contrast on both ends. */
+  --header-footer-gradient: linear-gradient(90deg, #7B5B99 0%, #4A2E63 55%, #1B1420 100%);
 
-  /* Page-hero gold glow: the light bg is already near-max lightness, so the
-     radial gradient needs a much higher alpha than in dark mode to read as
-     a warm highlight instead of washing out — see dark-theme overrides. */
-  --hero-glow-alpha: .22;
+  /* Page-hero glow alpha: the dark bg is already near-max darkness, so the
+     radial gradient needs only a low alpha to read as a subtle highlight —
+     see the light-theme override below, which raises this since a near-white
+     bg needs much more alpha to show at all. */
+  --hero-glow-alpha: .10;
 
   /* Silver chrome treatment — banded light/dark grays read as a brushed-metal
      highlight when clipped to text; needs a mid-tone fallback for browsers
      without background-clip:text support. Used as-is for stat numbers, and
      (via --chrome-theme / --heading-fill below) for buttons/image borders/
-     headings in dark theme. */
+     headings in dark theme (the default). */
   --chrome-gradient: linear-gradient(
     180deg,
     #fdfdfd 0%,
@@ -83,111 +88,35 @@ Version: 1.0
   /* Chrome finish — theme-swappable alias so buttons and image borders can
      be gold in light theme and silver in dark theme without duplicating
      each rule. */
-  --chrome-theme: var(--chrome-gradient-gold);
-  --chrome-theme-fallback: var(--chrome-fallback-gold);
+  --chrome-theme: var(--chrome-gradient);
+  --chrome-theme-fallback: var(--chrome-fallback);
 
-  /* Heading fill — flat solid gold in light theme (no banded chrome
-     highlight); dark theme still gets the silver chrome gradient below. */
-  --heading-fill: var(--gold);
-  --heading-fill-fallback: var(--gold);
+  /* Heading fill — silver chrome gradient in dark theme (the default);
+     flat solid gold in light theme below. */
+  --heading-fill: var(--chrome-gradient);
+  --heading-fill-fallback: var(--chrome-fallback);
 
   /* Heading outline — only needed to keep letterforms readable when the
      fill is a gradient with pale bands; not needed for a flat fill. */
   --heading-outline: transparent;
 
-  /* Heading text-shadow — the light/dark emboss layers that gave chrome
-     headings a shiny highlight; off for the flat gold fill in light theme,
-     restored for the chrome gradient in dark theme below. */
-  --heading-text-shadow: none;
+  /* Heading text-shadow — the light/dark emboss layers that give chrome
+     headings a shiny highlight; off for the flat gold fill in light theme
+     below. */
+  --heading-text-shadow:
+    0 1px 0 rgba(255,255,255,.4),
+    0 -1px 1px rgba(0,0,0,.1),
+    0 2px 6px rgba(0,0,0,.16),
+    0 1px 2px rgba(0,0,0,.2);
 
   /* Backing plate for chrome headings sitting directly on the plain page
      background (no hero photo/panel behind them to give contrast) — see
      .why-best, .why-best-subheading, .testimonials-head below. */
-  --heading-panel-bg: rgba(74, 46, 99, .08);
-
-  /* Heading underline accent (.stroke-heading) — gold "beam" in light
-     theme, purple in dark theme below: tapered gold at the ends, bright
-     near-white core in the middle. */
-  --heading-accent-line: linear-gradient(
-    90deg,
-    transparent 0%,
-    var(--gold) 18%,
-    #fff6e4 50%,
-    var(--gold) 82%,
-    transparent 100%
-  );
-  --heading-accent-line-glow:
-    0 0 3px 1px rgba(255,246,228,.6),
-    0 0 8px 2px rgba(185,151,91,.4);
-  --heading-accent-line-width: 180px;
-}
-
-/* =========================================================
-   DARK THEME
-   ========================================================= */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg:          #1B1420;
-    --bg-alt:      #23192B;
-    --ink:         #F1E8F6;
-    --ink-soft:    #B8A7C5;
-    --rose:        #C79FE8;
-    --rose-deep:   #E3C9F5;
-    --line:        #3A2E44;
-    --gold:        #C9CDD3;
-    --gold-soft:   #4B4F56;
-    --panel:       #2C2135;
-    --surface:     #2C2135;
-    --marble-veins: 255,255,255;
-    --marble-blend: screen;
-    --hero-glow-alpha: .10;
-    --chrome-theme: var(--chrome-gradient);
-    --chrome-theme-fallback: var(--chrome-fallback);
-    --heading-fill: var(--chrome-gradient);
-    --heading-fill-fallback: var(--chrome-fallback);
-    --heading-outline: transparent;
-    --heading-text-shadow:
-      0 1px 0 rgba(255,255,255,.4),
-      0 -1px 1px rgba(0,0,0,.1),
-      0 2px 6px rgba(0,0,0,.16),
-      0 1px 2px rgba(0,0,0,.2);
-    --heading-panel-bg: rgba(255, 255, 255, .05);
-    --heading-accent-line: linear-gradient(
-      90deg,
-      transparent 0%,
-      #B983FF 18%,
-      #ffffff 50%,
-      #B983FF 82%,
-      transparent 100%
-    );
-    --heading-accent-line-glow:
-      0 0 4px 1px rgba(185,131,255,.75),
-      0 0 10px 2px rgba(185,131,255,.5),
-      0 0 20px 5px rgba(185,131,255,.28);
-    --heading-accent-line-width: 180px;
-  }
-}
-:root[data-theme="dark"] {
-  --bg:          #1B1420;
-  --bg-alt:      #23192B;
-  --ink:         #F1E8F6;
-  --ink-soft:    #B8A7C5;
-  --rose:        #C79FE8;
-  --rose-deep:   #E3C9F5;
-  --line:        #3A2E44;
-  --gold:        #C9CDD3;
-  --gold-soft:   #4B4F56;
-  --panel:       #2C2135;
-  --surface:     #2C2135;
-  --marble-veins: 255,255,255;
-  --marble-blend: screen;
-  --hero-glow-alpha: .10;
-  --chrome-theme: var(--chrome-gradient);
-  --chrome-theme-fallback: var(--chrome-fallback);
-  --heading-fill: var(--chrome-gradient);
-  --heading-fill-fallback: var(--chrome-fallback);
-  --heading-outline: transparent;
   --heading-panel-bg: rgba(255, 255, 255, .05);
+
+  /* Heading underline accent (.stroke-heading) — purple "beam" in dark
+     theme (the default), gold in light theme below: tapered accent color
+     at the ends, bright near-white core in the middle. */
   --heading-accent-line: linear-gradient(
     90deg,
     transparent 0%,
@@ -201,6 +130,53 @@ Version: 1.0
     0 0 10px 2px rgba(185,131,255,.5),
     0 0 20px 5px rgba(185,131,255,.28);
   --heading-accent-line-width: 180px;
+
+  /* Section-divider glow — thin purple glowing hairline used to separate
+     the home-screen category buttons from the hero above (.category-strip). */
+  --divider-glow:
+    0 0 4px 1px rgba(185,131,255,.7),
+    0 0 12px 3px rgba(185,131,255,.4);
+}
+
+/* =========================================================
+   LIGHT THEME (opt-in via the header theme toggle; persisted
+   in localStorage as 'be-theme' — see header.php)
+   ========================================================= */
+:root[data-theme="light"] {
+  --bg:          #EBC2FF;
+  --bg-alt:      #9368ab;
+  --ink:         #2E2438;
+  --ink-soft:    #5F5568;
+  --rose:        #7B5B99;
+  --rose-deep:   #4A2E63;
+  --line:        #DED0E6;
+  --gold:        #B9975B;
+  --gold-soft:   #E8DCC4;
+  --panel:       #2E2438;
+  --surface:     #FFFFFF;
+  --hero-glow-alpha: .22;
+  --chrome-theme: var(--chrome-gradient-gold);
+  --chrome-theme-fallback: var(--chrome-fallback-gold);
+  --heading-fill: var(--gold);
+  --heading-fill-fallback: var(--gold);
+  --heading-outline: transparent;
+  --heading-text-shadow: none;
+  --heading-panel-bg: rgba(74, 46, 99, .08);
+  --heading-accent-line: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--gold) 18%,
+    #fff6e4 50%,
+    var(--gold) 82%,
+    transparent 100%
+  );
+  --heading-accent-line-glow:
+    0 0 3px 1px rgba(255,246,228,.6),
+    0 0 8px 2px rgba(185,151,91,.4);
+  --heading-accent-line-width: 180px;
+  --divider-glow:
+    0 0 4px 1px rgba(123,91,153,.55),
+    0 0 10px 2px rgba(123,91,153,.3);
 }
 
 /* =========================================================
@@ -241,8 +217,13 @@ h1, h2, h3 {
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
 
-/* Signature underline — straight hairline, used under key headings */
-.stroke-heading { position: relative; display: inline-block; }
+/* Signature underline — straight hairline, used under key headings.
+   The line sits at bottom: -0.6em, i.e. outside the heading's own box —
+   more than the base h1/h2/h3 margin-bottom (.5em), so without this the
+   line had almost no clearance from (or even overlapped) whatever
+   followed. margin-bottom here overrides that .5em with room for the
+   line plus a clear gap beneath it. */
+.stroke-heading { position: relative; display: inline-block; margin-bottom: 1.6em; }
 .stroke-heading::after {
   content: "";
   position: absolute;
@@ -259,7 +240,10 @@ h1, h2, h3 {
    TOP UTILITY BAR
    ========================================================= */
 .top-bar {
-  color: var(--ink);
+  /* Fixed light text: the header is now a fixed purple ombre panel (see
+     .site-header), not a theme-swapped background, so text stays light in
+     both site themes instead of following --ink. */
+  color: rgba(255,255,255,.85);
   font-size: .76rem;
   letter-spacing: .04em;
 }
@@ -292,22 +276,18 @@ h1, h2, h3 {
   height: 22px;
   padding: 0;
   background: none;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255,255,255,.35);
   border-radius: 50%;
-  color: var(--ink);
+  color: rgba(255,255,255,.85);
   cursor: pointer;
   transition: border-color .25s ease, color .25s ease;
 }
 .theme-toggle:hover { border-color: var(--gold); color: var(--gold); }
 .theme-toggle svg { width: 13px; height: 13px; }
-.theme-toggle .icon-sun { display: none; }
-.theme-toggle .icon-moon { display: block; }
-:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
-  :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
-}
+.theme-toggle .icon-sun { display: block; }
+.theme-toggle .icon-moon { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
 .top-bar-social {
   display: flex;
   align-items: center;
@@ -322,30 +302,12 @@ h1, h2, h3 {
 .site-header {
   position: relative;
   z-index: 40;
-  background: var(--bg);
-  border-bottom: 1px solid var(--line);
-}
-/* Faux marble veining, matching the footer treatment (see .site-footer::before)
-   but color/blend-swapped per theme via --marble-veins & --marble-blend, since
-   the header background flips light/dark instead of staying a fixed dark panel. */
-.site-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  mix-blend-mode: var(--marble-blend);
-  background:
-    linear-gradient(128deg, transparent 41%, rgba(var(--marble-veins),.10) 42%, rgba(var(--marble-veins),.02) 43.5%, transparent 45%),
-    linear-gradient(64deg, transparent 17%, rgba(185,151,91,.16) 18%, transparent 20%),
-    linear-gradient(154deg, transparent 58%, rgba(var(--marble-veins),.07) 59%, rgba(var(--marble-veins),.05) 59.6%, transparent 61%),
-    linear-gradient(38deg, transparent 76%, rgba(185,151,91,.12) 77%, transparent 79%),
-    linear-gradient(101deg, transparent 8%, rgba(var(--marble-veins),.05) 9%, transparent 11%),
-    linear-gradient(172deg, transparent 88%, rgba(var(--marble-veins),.06) 89%, transparent 91%),
-    radial-gradient(65% 55% at 18% 12%, rgba(var(--marble-veins),.07), transparent 60%),
-    radial-gradient(55% 50% at 82% 78%, rgba(185,151,91,.14), transparent 65%),
-    radial-gradient(45% 40% at 62% 25%, rgba(var(--marble-veins),.04), transparent 60%),
-    radial-gradient(50% 45% at 30% 85%, rgba(var(--marble-veins),.03), transparent 60%);
+  /* Client-requested fixed purple ombre (left-to-right), replacing the old
+     faux marble veining — see --header-footer-gradient. Fixed rather than
+     theme-swapped, so nav/top-bar text below is pinned to light colors too. */
+  background: var(--header-footer-gradient);
+  color: rgba(255,255,255,.92);
+  border-bottom: 1px solid rgba(255,255,255,.12);
 }
 .site-header > .top-bar,
 .site-header > .container {
@@ -392,7 +354,7 @@ h1, h2, h3 {
   transform: translateY(-50%);
   width: 1px;
   height: 13px;
-  background: var(--line);
+  background: rgba(255,255,255,.25);
 }
 .main-nav a {
   font-size: .82rem;
@@ -404,7 +366,9 @@ h1, h2, h3 {
   display: block;
   width: 0;
   height: 1px;
-  background: var(--rose);
+  /* Fixed gold, not --rose: a purple underline would wash out against the
+     purple ombre header background. */
+  background: var(--gold);
   transition: width .25s ease;
 }
 .main-nav > ul > li:hover > a::after { width: 100%; }
@@ -423,7 +387,16 @@ h1, h2, h3 {
   gap: 0;
 }
 .main-nav li:hover > .sub-menu { display: flex; }
-.main-nav .sub-menu a { display: block; padding: .5rem 1.25rem; }
+.main-nav .sub-menu a {
+  display: block;
+  padding: .5rem 1.25rem;
+  /* Override the fixed white nav-link text (set for contrast against the
+     purple header bar): the dropdown panel sits on --surface, not the
+     header background, so its links need theme-aware ink instead — plain
+     white was invisible against a white --surface in light theme until
+     hover set a color. */
+  color: var(--ink);
+}
 .main-nav .sub-menu a:hover { background: var(--bg-alt); color: var(--rose-deep); }
 
 .btn {
@@ -450,8 +423,11 @@ h1, h2, h3 {
    HERO
    ========================================================= */
 .hero {
-  background: var(--panel);
-  color: var(--white);
+  /* Blended into the page background (matches .about-hero, .survey-hero,
+     etc.) instead of sitting in its own dark panel. */
+  background:
+    radial-gradient(60% 120% at 15% 0%, rgba(185,151,91,var(--hero-glow-alpha)), transparent 70%),
+    var(--bg);
   padding: clamp(3.5rem, 7vw, 6.5rem) 0;
 }
 .hero-grid {
@@ -463,9 +439,8 @@ h1, h2, h3 {
 .hero-content { max-width: 560px; }
 .hero h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
-  color: var(--white);
 }
-.hero p { color: #EDE4DF; margin-bottom: 1.5rem; }
+.hero p { color: var(--ink-soft); margin-bottom: 1.5rem; }
 
 .hero-photo {
   position: relative;
@@ -497,11 +472,24 @@ h1, h2, h3 {
    TREATMENT / CATEGORY STRIP
    ========================================================= */
 .category-strip {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--gap);
   padding: 4rem 0;
+}
+.category-strip::before {
+  /* Thin glowing purple divider separating the home-screen category
+     buttons from the hero section above. */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--rose);
+  box-shadow: var(--divider-glow);
 }
 .category-btn {
   position: relative;
@@ -556,7 +544,8 @@ h1, h2, h3 {
    ========================================================= */
 .about-split {
   padding: 5rem 0;
-  background: var(--bg-alt);
+  /* Same fixed purple ombre as the header/footer/stats band. */
+  background: var(--header-footer-gradient);
 }
 .about-split-grid {
   display: grid;
@@ -584,15 +573,17 @@ h1, h2, h3 {
   box-shadow: 0 30px 60px -20px rgba(46, 36, 56, .35);
 }
 .about-split .eyebrow {
+  /* No color override here now: the base .eyebrow gold (below) already
+     reads fine against the fixed dark ombre background, same as it does
+     in the header/nav. var(--rose-deep) would have blended into it. */
   text-transform: uppercase;
   letter-spacing: .12em;
   font-size: .78rem;
-  color: var(--rose-deep);
   margin-bottom: .75rem;
   display: block;
 }
 .about-split h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); }
-.about-split p { color: var(--ink-soft); }
+.about-split p { color: rgba(255,255,255,.8); }
 
 @media (max-width: 760px) {
   .about-split-grid { grid-template-columns: 1fr; }
@@ -662,8 +653,9 @@ h1, h2, h3 {
    STATS BAND (front page)
    ========================================================= */
 .stats-band {
-  background: var(--panel);
-  color: var(--white);
+  /* Same fixed purple ombre as the header/footer, not the page --bg. */
+  background: var(--header-footer-gradient);
+  color: rgba(255,255,255,.92);
 }
 .stats-grid {
   display: grid;
@@ -681,6 +673,10 @@ h1, h2, h3 {
 .stat-number,
 .stat-number .stat-suffix {
   font-family: var(--font-display);
+  /* Fixed chrome fill, not the theme-swapped --heading-fill: the band's
+     background is now the fixed dark ombre (like the header/footer), not
+     the page --bg, so it needs the same fixed treatment regardless of
+     site theme. */
   color: var(--chrome-fallback);
   background: var(--chrome-gradient);
   -webkit-background-clip: text;
@@ -1344,32 +1340,12 @@ a.menu-item-head:hover .menu-item-arrow { transform: translateX(4px); }
 .site-footer {
   position: relative;
   overflow: hidden;
-  background: var(--panel);
+  /* Client-requested fixed purple ombre (left-to-right), replacing the old
+     faux marble veining — matches .site-header via --header-footer-gradient. */
+  background: var(--header-footer-gradient);
   color: #C9BFD1;
   padding: 5rem 0 2rem;
   font-size: .88rem;
-}
-/* Faux black-and-gold marble veining, layered behind the footer content.
-   Each gradient is a single non-repeating "hard stop" line at its own angle
-   & position so the veins cross irregularly instead of tiling like a pattern. */
-.site-footer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  mix-blend-mode: screen;
-  background:
-    linear-gradient(128deg, transparent 41%, rgba(255,255,255,.10) 42%, rgba(255,255,255,.02) 43.5%, transparent 45%),
-    linear-gradient(64deg, transparent 17%, rgba(185,151,91,.16) 18%, transparent 20%),
-    linear-gradient(154deg, transparent 58%, rgba(255,255,255,.07) 59%, rgba(255,255,255,.05) 59.6%, transparent 61%),
-    linear-gradient(38deg, transparent 76%, rgba(185,151,91,.12) 77%, transparent 79%),
-    linear-gradient(101deg, transparent 8%, rgba(255,255,255,.05) 9%, transparent 11%),
-    linear-gradient(172deg, transparent 88%, rgba(255,255,255,.06) 89%, transparent 91%),
-    radial-gradient(65% 55% at 18% 12%, rgba(255,255,255,.07), transparent 60%),
-    radial-gradient(55% 50% at 82% 78%, rgba(185,151,91,.14), transparent 65%),
-    radial-gradient(45% 40% at 62% 25%, rgba(255,255,255,.04), transparent 60%),
-    radial-gradient(50% 45% at 30% 85%, rgba(255,255,255,.03), transparent 60%);
 }
 .site-footer > .container { position: relative; z-index: 1; }
 .footer-top {
@@ -1905,13 +1881,31 @@ a.menu-item-head:hover .menu-item-arrow { transform: translateX(4px); }
 .survey-embed {
   padding: 0 0 6rem;
 }
+/* Gold/chrome frame + ombre card around the Tally embed, matching the
+   .hero-photo treatment elsewhere on the site. The Tally form's own text
+   color is set inside Tally and can't be restyled from this stylesheet
+   (cross-origin iframe) — it's always dark text, so the gradient is kept
+   pale (fixed, not swapped by site theme) so contrast holds either way. */
+.survey-embed-panel {
+  position: relative;
+  padding: 14px;
+  background: linear-gradient(135deg, #FDEFFA 0%, #F3DFFB 45%, #E4D2FA 100%);
+  box-shadow: 0 30px 60px -20px rgba(46, 36, 56, .35);
+}
+.survey-embed-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--gold);
+  border-image: var(--chrome-theme) 1;
+  pointer-events: none;
+}
 .survey-embed iframe {
   display: block;
   width: 100%;
   height: 100vh;
   min-height: 700px;
   border: 0;
-  border-radius: var(--radius);
 }
 
 @media (max-width: 640px) {

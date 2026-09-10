@@ -92,8 +92,9 @@
         var toggle = document.getElementById( 'theme-toggle' );
         if ( ! toggle ) { return; }
         toggle.addEventListener( 'click', function () {
-            var isDark = document.documentElement.getAttribute( 'data-theme' ) === 'dark'
-                || ( ! document.documentElement.hasAttribute( 'data-theme' ) && window.matchMedia( '(prefers-color-scheme: dark)' ).matches );
+            // Dark is the site default (no data-theme attribute = dark), so
+            // anything other than an explicit 'light' counts as dark.
+            var isDark = document.documentElement.getAttribute( 'data-theme' ) !== 'light';
             var next = isDark ? 'light' : 'dark';
             document.documentElement.setAttribute( 'data-theme', next );
             localStorage.setItem( 'be-theme', next );
